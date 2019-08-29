@@ -1658,11 +1658,11 @@
 					</Attribute>
 					<Attribute uuid="0cf572c4-7575-11e9-9197-002522f8f390">
 						<Properties>
-							<Name>Действие</Name>
+							<Name>ПоУмолчанию</Name>
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Действие</v8:content>
+									<v8:content>По умолчанию</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>

@@ -1100,7 +1100,7 @@
 									<ExtendedTooltip name="ПрограммныйИнтерфейсТипПараметраРасширеннаяПодсказка" id="662"/>
 								</InputField>
 								<InputField name="ПрограммныйИнтерфейсДействие" id="733">
-									<DataPath>Объект.ПрограммныйИнтерфейс.Действие</DataPath>
+									<DataPath>Объект.ПрограммныйИнтерфейс.ПоУмолчанию</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ChoiceButton>true</ChoiceButton>
 									<ContextMenu name="ПрограммныйИнтерфейсДействиеКонтекстноеМеню" id="734"/>
