@@ -1,0 +1,33 @@
+﻿<CatalogObject._37583_ALG xmlns="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<IsFolder>false</IsFolder>
+	<Ref>46ca233e-c8b6-11e9-5597-002522f8f390</Ref>
+	<DeletionMark>false</DeletionMark>
+	<Parent>e8af604e-76d6-11e9-0f9f-002522f8f390</Parent>
+	<Code>000000052</Code>
+	<Description>__КОМАНДАСИСТЕМЫ__</Description>
+	<КодАлгоритма>Если Параметры.Пользователи.Найти(ПользователиКлиент.ТекущийПользователь()) &lt;&gt; Неопределено Тогда 
+ КомандаСистемы(Параметры.КомандаСистемы) ; 
+ КонецЕсли ; 
+~EndOfText:</КодАлгоритма>
+	<Текст>Если @Пользователи.Найти(ПользователиКлиент.ТекущийПользователь())&lt;&gt; Неопределено Тогда 
+	КомандаСистемы(@КомандаСистемы); 
+КонецЕсли; </Текст>
+	<Хранилище>AQEyAQAAAAAAAO+7v3siIyIsNDIzODAxOWQtN2U0OS00ZmM5LTkxZGItYjZiOTUx
+ZDVjZjhlLA0KezIsDQp7DQp7IlMiLCLQn9C+0LvRjNC30L7QstCw0YLQtdC70Lgi
+fSwNCnsiIyIsNTFlN2EwZDItNTMwYi0xMWQ0LWI5OGEtMDA4MDQ4ZGEzMDM0LA0K
+ezEsDQp7IiMiLGEwYzczZDhkLWRiYzYtNGVhOS1iYTA1LWQwZWEzNjgxY2RhMiwy
+MDk6ODc5YTAwMjUyMmY4ZjM5MDExZTkyYWE0ODMxZWJmZWZ9DQp9DQp9DQp9LA0K
+ew0KeyJTIiwi0JrQvtC80LDQvdC00LDQodC40YHRgtC10LzRiyJ9LA0KeyJTIiwi
+eGZjZTQtdGFza21hbmFnZXIifQ0KfQ0KfQ0KfQ==</Хранилище>
+	<Комментарий>ВНИМАНИЕ ! ПОТЕНЦИАЛЬНО ОПАСНЫЙ СКРИПТ</Комментарий>
+	<Кэшировать>false</Кэшировать>
+	<ТолькоТекст>false</ТолькоТекст>
+	<НаКлиенте>true</НаКлиенте>
+	<ВыбрасыватьИсключение>true</ВыбрасыватьИсключение>
+	<ВыполнитьВТранзакции>false</ВыполнитьВТранзакции>
+	<ЗаписыватьОшибкиВЖР>true</ЗаписыватьОшибкиВЖР>
+	<Теги/>
+	<ИдентификаторHTTP/>
+	<ИдентификаторРегламентногоЗадания/>
+	<РегламентноеЗадание>false</РегламентноеЗадание>
+</CatalogObject._37583_ALG>

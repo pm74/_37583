@@ -1,0 +1,63 @@
+﻿<CatalogObject._37583_ALG xmlns="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<IsFolder>false</IsFolder>
+	<Ref>4fae3bcf-74e3-11e9-7396-002522f8f390</Ref>
+	<DeletionMark>false</DeletionMark>
+	<Parent>1f238c29-c8e6-11e9-0e84-002522f8f390</Parent>
+	<Code>000000018</Code>
+	<Description>ВыгрузитьДанныеАсинхронно</Description>
+	<КодАлгоритма>АдресХранилища = _37583_АлгоритмыСервер.ВыполнитьФункцию(Параметры.ПолучитьФайлНаСервере,Параметры)["Результат"] ; 
+ Оповещение = Новый ОписаниеОповещения("ВыполнитьЗавершение", ЭтотОбъект,Параметры) ; 
+ ОписаниеФайла = Новый ОписаниеПередаваемогоФайла() ; 
+ ОписаниеФайла.Хранение = АдресХранилища ; 
+ REPO = _37583_АлгоритмыСервер.ПолучитьПараметр("37583","REPO")["REPO"] ; 
+ ОписаниеФайла.Имя = "" + REPO + ?(_37583_ОбщегоНазначенияКлиентСервер.ЭтоLinux(),"/","\") + Параметры.ИмяФайла ; 
+ ПолучаемыеФайлы = Новый Массив ; 
+ ПолучаемыеФайлы.Добавить(ОписаниеФайла) ; 
+ НачатьПолучениеФайлов(Оповещение, ПолучаемыеФайлы,, Ложь) ; 
+~EndOfText:</КодАлгоритма>
+	<Текст>АдресХранилища = @Функция(@ПолучитьФайлНаСервере,Параметры)#Результат; 
+Оповещение = Новый ОписаниеОповещения("ВыполнитьЗавершение", ЭтотОбъект,Параметры); 
+ОписаниеФайла = Новый ОписаниеПередаваемогоФайла(); 
+ОписаниеФайла.Хранение = АдресХранилища; 
+REPO = _37583_АлгоритмыСервер.ПолучитьПараметр("37583","REPO")#REPO;
+ОписаниеФайла.Имя =""+REPO+?(_37583_ОбщегоНазначенияКлиентСервер.ЭтоLinux(),"/","\") + @ИмяФайла; 
+ПолучаемыеФайлы = Новый Массив; 
+ПолучаемыеФайлы.Добавить(ОписаниеФайла); 
+НачатьПолучениеФайлов(Оповещение, ПолучаемыеФайлы,, Ложь);</Текст>
+	<Хранилище>AQE1AgAAAAAAAO+7v3siIyIsNDIzODAxOWQtN2U0OS00ZmM5LTkxZGItYjZiOTUx
+ZDVjZjhlLA0KezQsDQp7DQp7IlMiLCLQkNC70LPQvtGA0LjRgtC80JfQsNCy0LXR
+gNGI0LXQvdC40LUifSwNCnsiIyIsZTRhYjVmNWItNmY0Yy0xMWU5LTE0OTUtMDAy
+NTIyZjhmMzkwLDIyMTgzOjBlODQwMDI1MjJmOGYzOTAxMWU5YzhlNjFmMjM4YzFl
+fQ0KfSwNCnsNCnsiUyIsItCY0LzRj9Ck0LDQudC70LAifSwNCnsiUyIsInRlc3Qu
+eG1sIn0NCn0sDQp7DQp7IlMiLCLQn9C+0LvRg9GH0LjRgtGM0KTQsNC50LvQndCw
+0KHQtdGA0LLQtdGA0LUifSwNCnsiIyIsZTRhYjVmNWItNmY0Yy0xMWU5LTE0OTUt
+MDAyNTIyZjhmMzkwLDIyMTgzOjBlODQwMDI1MjJmOGYzOTAxMWU5YzhlNjFmMjM4
+YzI4fQ0KfSwNCnsNCnsiUyIsItCU0LDQvdC90YvQtdCS0YvQs9GA0YPQt9C60Lgi
+fSwNCnsiIyIsM2Q0OGZlYWUtYTljNi00YzVhLWEwOTktOWViNjQ3NzYzMGM2LA0K
+ezIsDQp7DQp7IkQiLDIwMTkwODI4MDAwMDAwfSwNCnsiQiIsMX0NCn0sDQp7DQp7
+IkQiLDIwMTkwODI3MDAwMDAwfSwNCnsiQiIsMH0NCn0NCn0NCn0NCn0NCn0NCn0=
+</Хранилище>
+	<Комментарий>асинхронная выгрузка </Комментарий>
+	<Кэшировать>false</Кэшировать>
+	<ТолькоТекст>false</ТолькоТекст>
+	<НаКлиенте>true</НаКлиенте>
+	<ВыбрасыватьИсключение>true</ВыбрасыватьИсключение>
+	<ВыполнитьВТранзакции>false</ВыполнитьВТранзакции>
+	<ЗаписыватьОшибкиВЖР>true</ЗаписыватьОшибкиВЖР>
+	<Теги>Программный интерфейс, асинхронность</Теги>
+	<ИдентификаторHTTP/>
+	<ИдентификаторРегламентногоЗадания/>
+	<РегламентноеЗадание>false</РегламентноеЗадание>
+	<ПрограммныйИнтерфейс>
+		<Вход>true</Вход>
+		<Имя>ПолучитьФайлНаСервере</Имя>
+		<ТипПараметра>Алгоритм</ТипПараметра>
+		<Действие/>
+	</ПрограммныйИнтерфейс>
+	<ПрограммныйИнтерфейс>
+		<Вход>true</Вход>
+		<Имя>ИмяФайла</Имя>
+		<ТипПараметра>Строка</ТипПараметра>
+		<Действие/>
+	</ПрограммныйИнтерфейс>
+</CatalogObject._37583_ALG>
