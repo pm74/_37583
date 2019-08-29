@@ -38,7 +38,7 @@
 	Сообщить(Элемент); 
 КонецЦикла;  
 </Текст>
-	<Хранилище>AQFCAwAAAAAAAO+7v3siIyIsNDIzODAxOWQtN2U0OS00ZmM5LTkxZGItYjZiOTUx
+	<Хранилище>AQFKAwAAAAAAAO+7v3siIyIsNDIzODAxOWQtN2U0OS00ZmM5LTkxZGItYjZiOTUx
 ZDVjZjhlLA0KezQsDQp7DQp7IlMiLCJ4bWxycGMifSwNCnsiIyIsZTRhYjVmNWIt
 NmY0Yy0xMWU5LTE0OTUtMDAyNTIyZjhmMzkwLDIyMTgzOmI3OTQwMDI1MjJmOGYz
 OTAxMWU5NzQ0Y2U2N2Y0MzgyfQ0KfSwNCnsNCnsiUyIsItCg0LDQt9C+0LHRgNCw
@@ -54,8 +54,8 @@ eyJTIiwzMCwxfQ0KfSwiIiwwfSwNCnsyLCLQktC40LTQodGA0LDQstC90LXQvdC4
 NDgwNzBhZTliZDY0fQ0KfSwiIiwwfSwNCnszLCLQl9C90LDRh9C10L3QuNC1IiwN
 CnsiUGF0dGVybiJ9LCIiLDB9DQp9LA0KezIsMywwLDEsMSwyLDIsMywNCnsxLDEs
 DQp7MiwwLDMsDQp7IlMiLCLQotC10LPQuCJ9LA0KeyIjIixkY2JmMjY5OC0zYzFm
-LTRhMjItOTk3Zi00ODA3MGFlOWJkNjQsMH0sDQp7IlMiLCJ0ZXN0In0sMH0NCn0s
-LTEsMH0sDQp7MCwwfQ0KfQ0KfQ0KfQ0KfQ0KfQ==</Хранилище>
+LTRhMjItOTk3Zi00ODA3MGFlOWJkNjQsMH0sDQp7IlMiLCJSZWdFeHBQeXRob24i
+fSwwfQ0KfSwtMSwwfSwNCnswLDB9DQp9DQp9DQp9DQp9DQp9</Хранилище>
 	<Комментарий/>
 	<Кэшировать>false</Кэшировать>
 	<ТолькоТекст>false</ТолькоТекст>
@@ -63,12 +63,12 @@ LTEsMH0sDQp7MCwwfQ0KfQ0KfQ0KfQ0KfQ0KfQ==</Хранилище>
 	<ВыбрасыватьИсключение>true</ВыбрасыватьИсключение>
 	<ВыполнитьВТранзакции>false</ВыполнитьВТранзакции>
 	<ЗаписыватьОшибкиВЖР>true</ЗаписыватьОшибкиВЖР>
-	<Теги>PythonRPC</Теги>
+	<Теги>RegExpPython</Теги>
 	<ИдентификаторHTTP/>
 	<ИдентификаторРегламентногоЗадания/>
 	<РегламентноеЗадание>false</РегламентноеЗадание>
 	<КомандныйИнтерфейс>
-		<ГруппаКоманд/>
+		<ГруппаКоманд>Алгоритмы</ГруппаКоманд>
 		<Представление>RegExp 1c -&gt; Python</Представление>
 		<Важность>Важное</Важность>
 		<КонтекстФормы>Справочник._37583_ALG.Форма.ФормаЭлемента</КонтекстФормы>
@@ -85,19 +85,19 @@ LTEsMH0sDQp7MCwwfQ0KfQ0KfQ0KfQ0KfQ0KfQ==</Хранилище>
 	<ПрограммныйИнтерфейс>
 		<Вход>true</Вход>
 		<Имя>xmlrpc</Имя>
-		<ТипПараметра>Строка</ТипПараметра>
-		<Действие/>
+		<ТипПараметра>CatalogRef._37583_ALG</ТипПараметра>
+		<ПоУмолчанию>EasyRPC выполнить функцию (строка)</ПоУмолчанию>
 	</ПрограммныйИнтерфейс>
 	<ПрограммныйИнтерфейс>
 		<Вход>true</Вход>
 		<Имя>Шаблон</Имя>
-		<ТипПараметра>Строка</ТипПараметра>
-		<Действие/>
+		<ТипПараметра>string</ТипПараметра>
+		<ПоУмолчанию>&lt;param&gt;&lt;value&gt;%2&lt;/value&gt;&lt;/param&gt;</ПоУмолчанию>
 	</ПрограммныйИнтерфейс>
 	<ПрограммныйИнтерфейс>
 		<Вход>true</Вход>
 		<Имя>Разобратьxml</Имя>
-		<ТипПараметра>Алгоритм</ТипПараметра>
-		<Действие/>
+		<ТипПараметра>CatalogRef._37583_ALG</ТипПараметра>
+		<ПоУмолчанию>EasyRPC  РезультатXML  в массив</ПоУмолчанию>
 	</ПрограммныйИнтерфейс>
 </CatalogObject._37583_ALG>
