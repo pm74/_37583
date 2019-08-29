@@ -152,6 +152,9 @@
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="ДеревоСправочникаПометкаКонтекстноеМеню" id="33"/>
 					<ExtendedTooltip name="ДеревоСправочникаПометкаРасширеннаяПодсказка" id="34"/>
+					<Events>
+						<Event name="OnChange">ДеревоСправочникаПометкаПриИзменении</Event>
+					</Events>
 				</CheckBoxField>
 				<InputField name="ДеревоСправочникаАлгоритм" id="17">
 					<DataPath>ДеревоСправочника.Алгоритм</DataPath>

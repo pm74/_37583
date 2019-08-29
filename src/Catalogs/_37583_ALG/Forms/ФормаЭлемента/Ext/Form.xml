@@ -111,6 +111,22 @@
 							<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
 							<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="133"/>
 						</InputField>
+						<PictureField name="Поле1" id="796">
+							<DataPath>Объект.НаКлиенте</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>4</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<ValuesPicture>
+								<xr:Ref>CommonPicture._37583_Assistent</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</ValuesPicture>
+							<Border width="1">
+								<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+							</Border>
+							<ContextMenu name="Поле1КонтекстноеМеню" id="797"/>
+							<ExtendedTooltip name="Поле1РасширеннаяПодсказка" id="798"/>
+						</PictureField>
 					</ChildItems>
 				</UsualGroup>
 			</ChildItems>

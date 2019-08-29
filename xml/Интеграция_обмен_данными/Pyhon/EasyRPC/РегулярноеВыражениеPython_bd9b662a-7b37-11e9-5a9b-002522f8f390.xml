@@ -1,0 +1,103 @@
+﻿<CatalogObject._37583_ALG xmlns="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<IsFolder>false</IsFolder>
+	<Ref>bd9b662a-7b37-11e9-5a9b-002522f8f390</Ref>
+	<DeletionMark>false</DeletionMark>
+	<Parent>4fae3bd8-74e3-11e9-7396-002522f8f390</Parent>
+	<Code>000000046</Code>
+	<Description>РегулярноеВыражениеPython</Description>
+	<КодАлгоритма>ProcName = "RegExpSub" ; 
+ МассивПараметров = Новый Массив() ; 
+ МассивПараметров.Добавить("регулярное1выражение2на3python") ; 
+ МассивПараметров.Добавить("\d") ; 
+ МассивПараметров.Добавить("\n") ; 
+ МассивТипов = Новый Массив() ; 
+ МассивТипов.Добавить("str") ; 
+ МассивТипов.Добавить("str") ; 
+ МассивТипов.Добавить("str") ; 
+ РезультатXML = _37583_АлгоритмыСервер.ВыполнитьФункцию(Параметры.xmlrpc, Новый Структура("ProcName,МассивПараметров,МассивТипов,Шаблон",ProcName,МассивПараметров,МассивТипов,Параметры.Шаблон))["Результат"] ; 
+ Сообщить("Ответ : " + РезультатXML) ; 
+ МассивРезультатов = _37583_АлгоритмыСервер.ВыполнитьФункцию(Параметры.Разобратьxml, Новый Структура("РезультатXML",РезультатXML))["Результат"] ; 
+ Для Каждого Элемент Из МассивРезультатов Цикл 
+ Сообщить(Элемент) ; 
+ КонецЦикла ; 
+ 
+~EndOfText:</КодАлгоритма>
+	<Текст>ProcName = "RegExpSub"; 
+МассивПараметров = Новый Массив(); 
+МассивПараметров.Добавить("регулярное1выражение2на3python"); 
+МассивПараметров.Добавить("\d"); 
+МассивПараметров.Добавить("\n"); 
+МассивТипов = Новый Массив(); 
+МассивТипов.Добавить("str"); 
+МассивТипов.Добавить("str"); 
+МассивТипов.Добавить("str"); 
+РезультатXML = @Функция(@xmlrpc, Новый Структура("ProcName,МассивПараметров,МассивТипов,Шаблон",ProcName,МассивПараметров,МассивТипов,@Шаблон))#Результат; 
+Сообщить("Ответ : "+РезультатXML); 
+МассивРезультатов = @Функция(@Разобратьxml, Новый Структура("РезультатXML",РезультатXML))#Результат; 
+Для Каждого Элемент Из МассивРезультатов Цикл 
+	Сообщить(Элемент); 
+КонецЦикла;  
+</Текст>
+	<Хранилище>AQFCAwAAAAAAAO+7v3siIyIsNDIzODAxOWQtN2U0OS00ZmM5LTkxZGItYjZiOTUx
+ZDVjZjhlLA0KezQsDQp7DQp7IlMiLCJ4bWxycGMifSwNCnsiIyIsZTRhYjVmNWIt
+NmY0Yy0xMWU5LTE0OTUtMDAyNTIyZjhmMzkwLDIyMTgzOmI3OTQwMDI1MjJmOGYz
+OTAxMWU5NzQ0Y2U2N2Y0MzgyfQ0KfSwNCnsNCnsiUyIsItCg0LDQt9C+0LHRgNCw
+0YLRjHhtbCJ9LA0KeyIjIixlNGFiNWY1Yi02ZjRjLTExZTktMTQ5NS0wMDI1MjJm
+OGYzOTAsMjIxODM6Yjc5NDAxMjUyMmY4ZjM5MDExZTk3NDRjZTY3ZjQzODJ9DQp9
+LA0Kew0KeyJTIiwi0KjQsNCx0LvQvtC9In0sDQp7IlMiLCI8cGFyYW0+PHZhbHVl
+PiUyPC92YWx1ZT48L3BhcmFtPiJ9DQp9LA0Kew0KeyJTIiwi0KPRgdC70L7QstC4
+0Y/QktC40LTQuNC80L7RgdGC0LjQmtC+0LzQsNC90LTRi18yeDLQvdCwUHl0aG9u
+In0sDQp7IiMiLGFjZjYxOTJlLTgxY2EtNDZlZi05M2E2LTVhNjk2OGI3ODY2MywN
+Cns5LA0KezMsDQp7MSwi0KDQtdC60LLQuNC30LjRgiIsDQp7IlBhdHRlcm4iLA0K
+eyJTIiwzMCwxfQ0KfSwiIiwwfSwNCnsyLCLQktC40LTQodGA0LDQstC90LXQvdC4
+0Y8iLA0KeyJQYXR0ZXJuIiwNCnsiIyIsZGNiZjI2OTgtM2MxZi00YTIyLTk5N2Yt
+NDgwNzBhZTliZDY0fQ0KfSwiIiwwfSwNCnszLCLQl9C90LDRh9C10L3QuNC1IiwN
+CnsiUGF0dGVybiJ9LCIiLDB9DQp9LA0KezIsMywwLDEsMSwyLDIsMywNCnsxLDEs
+DQp7MiwwLDMsDQp7IlMiLCLQotC10LPQuCJ9LA0KeyIjIixkY2JmMjY5OC0zYzFm
+LTRhMjItOTk3Zi00ODA3MGFlOWJkNjQsMH0sDQp7IlMiLCJ0ZXN0In0sMH0NCn0s
+LTEsMH0sDQp7MCwwfQ0KfQ0KfQ0KfQ0KfQ0KfQ==</Хранилище>
+	<Комментарий/>
+	<Кэшировать>false</Кэшировать>
+	<ТолькоТекст>false</ТолькоТекст>
+	<НаКлиенте>false</НаКлиенте>
+	<ВыбрасыватьИсключение>true</ВыбрасыватьИсключение>
+	<ВыполнитьВТранзакции>false</ВыполнитьВТранзакции>
+	<ЗаписыватьОшибкиВЖР>true</ЗаписыватьОшибкиВЖР>
+	<Теги>PythonRPC</Теги>
+	<ИдентификаторHTTP/>
+	<ИдентификаторРегламентногоЗадания/>
+	<РегламентноеЗадание>false</РегламентноеЗадание>
+	<КомандныйИнтерфейс>
+		<ГруппаКоманд/>
+		<Представление>RegExp 1c -&gt; Python</Представление>
+		<Важность>Важное</Важность>
+		<КонтекстФормы>Справочник._37583_ALG.Форма.ФормаЭлемента</КонтекстФормы>
+		<ОписаниеКартинки/>
+		<Назначение>ДляОбъекта</Назначение>
+		<МножественныйВыбор>false</МножественныйВыбор>
+		<РежимЗаписи>НеЗаписывать</РежимЗаписи>
+		<ОбъектМетаданных>Справочник._37583_ALG</ОбъектМетаданных>
+		<Порядок>2</Порядок>
+		<ОткрытьФорму>false</ОткрытьФорму>
+		<Активно>true</Активно>
+		<УсловияВидимости>УсловияВидимостиКоманды_2x2наPython</УсловияВидимости>
+	</КомандныйИнтерфейс>
+	<ПрограммныйИнтерфейс>
+		<Вход>true</Вход>
+		<Имя>xmlrpc</Имя>
+		<ТипПараметра>Строка</ТипПараметра>
+		<Действие/>
+	</ПрограммныйИнтерфейс>
+	<ПрограммныйИнтерфейс>
+		<Вход>true</Вход>
+		<Имя>Шаблон</Имя>
+		<ТипПараметра>Строка</ТипПараметра>
+		<Действие/>
+	</ПрограммныйИнтерфейс>
+	<ПрограммныйИнтерфейс>
+		<Вход>true</Вход>
+		<Имя>Разобратьxml</Имя>
+		<ТипПараметра>Алгоритм</ТипПараметра>
+		<Действие/>
+	</ПрограммныйИнтерфейс>
+</CatalogObject._37583_ALG>
