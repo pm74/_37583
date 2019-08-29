@@ -1,9 +1,0 @@
-﻿<CatalogObject._37583_ALG xmlns="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<IsFolder>true</IsFolder>
-	<Ref>1f238c29-c8e6-11e9-0e84-002522f8f390</Ref>
-	<DeletionMark>false</DeletionMark>
-	<Parent>4fae3bce-74e3-11e9-7396-002522f8f390</Parent>
-	<Code>000000055</Code>
-	<Description>ВыгрузкаЗагрузка_Файл</Description>
-	<Комментарий/>
-</CatalogObject._37583_ALG>
