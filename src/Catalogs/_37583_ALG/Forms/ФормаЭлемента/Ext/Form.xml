@@ -318,7 +318,6 @@
 									<ExtendedEdit>true</ExtendedEdit>
 									<TextColor>#23235E</TextColor>
 									<BackColor>web:MintCream</BackColor>
-									<Font ref="sys:OEMFixedFont" height="9" kind="WindowsFont"/>
 									<ContextMenu name="ТекстАлгоритмаКонтекстноеМеню" id="112">
 										<ChildItems>
 											<Button name="КонструкторЗапросаПоказать" id="536">
@@ -442,7 +441,6 @@
 											<TitleFont ref="sys:OEMFixedFont" kind="WindowsFont"/>
 											<Height>8</Height>
 											<MultiLine>true</MultiLine>
-											<Font ref="sys:OEMFixedFont" kind="WindowsFont"/>
 											<ContextMenu name="тШаблоныЗначениеКонтекстноеМеню" id="789"/>
 											<ExtendedTooltip name="тШаблоныЗначениеРасширеннаяПодсказка" id="790"/>
 										</InputField>
@@ -476,7 +474,6 @@
 									<MultiLine>true</MultiLine>
 									<TextColor>#032C2C</TextColor>
 									<BackColor>style:ToolTipBackColor</BackColor>
-									<Font ref="sys:OEMFixedFont" kind="WindowsFont"/>
 									<ContextMenu name="КодАлгоритмаКонтекстноеМеню" id="120"/>
 									<ExtendedTooltip name="КодАлгоритмаРасширеннаяПодсказка" id="159"/>
 								</InputField>
