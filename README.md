@@ -12,9 +12,6 @@
 * настраиваемые веб сервисы
   codeblock
 
-```
-code block
-```
 
 ```1c-enterprise
 ЗаписьJSON = Новый ЗаписьJSON; 
@@ -30,6 +27,24 @@ code block
 СтрокаJSON = ЗаписьJSON.Закрыть(); 
 Возврат СтрокаJSON; 
 ```
+
+```python
+In[1]: 
+import requests , json  
+response = requests.get('http://hostname/basename/hs/alg/test', auth=(username, password))
+text_json = json.loads(response.text.replace('\ufeff',''))
+print(text_json)
+for i in text_json:
+ print(i['Строка'])
+text_json[:1]
+Out[1]:
+[{'число': 1, 'Строка': 'первая строка'}, {'число': 2, 'Строка': 'вторая строка'}]
+первая строка
+вторая строка
+[{'число': 1, 'Строка': 'первая строка'}]
+```
+
+
 * лог ошибок в  журнале регистрации
 * дополнительные роли - использование и редактирование алгоритмов
 * экспорт/импорт .xml
