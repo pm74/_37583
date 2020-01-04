@@ -45,9 +45,9 @@
 In[1]: 
 import requests , json  
 response = requests.get('http://hostname/basename/hs/alg/test', auth=(username, password))
-text_json = json.loads(response.text.replace('\ufeff',''))
-print(text_json)
-for i in text_json:
+valuetable = json.loads(response.text.replace('\ufeff',''))
+print(valuetable)
+for i in valuetable:
  print(i['Строка'])
 Out[1]:
 [{'число': 1, 'Строка': 'первая строка'}, {'число': 2, 'Строка': 'вторая строка'}]
