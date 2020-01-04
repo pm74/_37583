@@ -34,12 +34,10 @@ text_json = json.loads(response.text.replace('\ufeff',''))
 print(text_json)
 for i in text_json:
  print(i['Строка'])
-text_json[:1]
 Out[1]:
 [{'число': 1, 'Строка': 'первая строка'}, {'число': 2, 'Строка': 'вторая строка'}]
 первая строка
 вторая строка
-[{'число': 1, 'Строка': 'первая строка'}]
 ```
 
 
