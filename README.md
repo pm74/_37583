@@ -48,12 +48,9 @@ response = requests.get('http://hostname/basename/hs/alg/test', auth=(username, 
 response.encoding = 'utf-8-sig'
 valuetable = response.json()
 print(valuetable)
-for i in valuetable:
- print(i['Строка'])
 Out[1]:
 [{'число': 1, 'Строка': 'первая строка'}, {'число': 2, 'Строка': 'вторая строка'}]
-первая строка
-вторая строка
+
 
 
 ```
