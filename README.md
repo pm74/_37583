@@ -43,16 +43,14 @@
 
 ```python
 In[1]: 
-import requests , json  
+import requests   
 response = requests.get('http://hostname/basename/hs/alg/test', auth=(username, password))
-valuetable = json.loads(response.text.replace('\ufeff',''))
+response.encoding = 'utf-8-sig'
+valuetable = response.json()
 print(valuetable)
-for i in valuetable:
- print(i['Строка'])
 Out[1]:
 [{'число': 1, 'Строка': 'первая строка'}, {'число': 2, 'Строка': 'вторая строка'}]
-первая строка
-вторая строка
+
 
 
 ```
