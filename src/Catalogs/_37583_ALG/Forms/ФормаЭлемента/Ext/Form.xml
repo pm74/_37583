@@ -802,7 +802,6 @@
 											<ExtendedTooltip name="НаКлиентеРасширеннаяПодсказка" id="392"/>
 										</CheckBoxField>
 										<CheckBoxField name="Асинхронный" id="743">
-											<DataPath>1/0:a662bbb2-757d-11e9-9197-002522f8f390</DataPath>
 											<CheckBoxType>Auto</CheckBoxType>
 											<ContextMenu name="АсинхронныйКонтекстноеМеню" id="744"/>
 											<ExtendedTooltip name="АсинхронныйРасширеннаяПодсказка" id="745"/>
@@ -841,9 +840,16 @@
 										</CheckBoxField>
 										<CheckBoxField name="ЗаписыватьОшибкиВЖР" id="554">
 											<DataPath>Объект.ЗаписыватьОшибкиВЖР</DataPath>
+											<TitleTextColor>#800000</TitleTextColor>
 											<CheckBoxType>Auto</CheckBoxType>
 											<ContextMenu name="ЗаписыватьОшибкиВЖРКонтекстноеМеню" id="555"/>
 											<ExtendedTooltip name="ЗаписыватьОшибкиВЖРРасширеннаяПодсказка" id="556"/>
+										</CheckBoxField>
+										<CheckBoxField name="ЗаписыватьСобытиияВЖР" id="799">
+											<DataPath>Объект.ЗаписыватьСобытиияВЖР</DataPath>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ЗаписыватьСобытиияВЖРКонтекстноеМеню" id="800"/>
+											<ExtendedTooltip name="ЗаписыватьСобытиияВЖРРасширеннаяПодсказка" id="801"/>
 										</CheckBoxField>
 										<CheckBoxField name="ТолькоТекст" id="515">
 											<DataPath>Объект.ТолькоТекст</DataPath>

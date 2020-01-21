@@ -109,7 +109,6 @@
 			<FileDragMode>AsFile</FileDragMode>
 			<DataPath>ДеревоСправочника</DataPath>
 			<RowPictureDataPath>ДеревоСправочника.Группа</RowPictureDataPath>
-			<TreeSpecialSearch>false</TreeSpecialSearch>
 			<ContextMenu name="ДеревоСправочникаКонтекстноеМеню" id="5"/>
 			<AutoCommandBar name="ДеревоСправочникаКоманднаяПанель" id="6">
 				<Autofill>false</Autofill>
