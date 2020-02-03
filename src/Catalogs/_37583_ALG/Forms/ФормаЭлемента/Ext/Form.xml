@@ -316,12 +316,6 @@
 							<ExtendedTooltip name="ГруппаТекстАлгоритмаРасширеннаяПодсказка" id="750"/>
 							<ChildItems>
 								<UsualGroup name="ГруппаТекст1" id="807">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>текст алгоритма</v8:content>
-										</v8:item>
-									</Title>
 									<ToolTip>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -337,17 +331,17 @@
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content> текст</v8:content>
+													<v8:content> </v8:content>
 												</v8:item>
 											</Title>
 											<TitleTextColor>#333333</TitleTextColor>
-											<TitleFont ref="style:NormalTextFont" height="9" kind="StyleItem"/>
 											<TitleLocation>None</TitleLocation>
 											<AutoMaxWidth>false</AutoMaxWidth>
 											<MultiLine>true</MultiLine>
 											<ExtendedEdit>true</ExtendedEdit>
 											<TextColor>#23235E</TextColor>
 											<BackColor>web:MintCream</BackColor>
+											<Font ref="style:NormalTextFont" faceName="Courier New" kind="StyleItem"/>
 											<ContextMenu name="ТекстАлгоритмаКонтекстноеМеню" id="112">
 												<ChildItems>
 													<Button name="КонструкторЗапросаПоказать" id="536">
@@ -358,14 +352,10 @@
 													<Button name="ОбернутьВДекоратор" id="836">
 														<Type>CommandBarButton</Type>
 														<CommandName>Form.Command.ВыбратьДекоратор</CommandName>
-														<Picture>
-															<xr:Ref>StdPicture.Rename</xr:Ref>
-															<xr:LoadTransparent>true</xr:LoadTransparent>
-														</Picture>
 														<Title>
 															<v8:item>
 																<v8:lang>ru</v8:lang>
-																<v8:content>Декоратор</v8:content>
+																<v8:content>@decorate</v8:content>
 															</v8:item>
 														</Title>
 														<ExtendedTooltip name="ОбернутьВДекораторРасширеннаяПодсказка" id="837"/>
@@ -402,7 +392,7 @@
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>спецсимволы :  @ ,$,#, __.,__ф __п;  (Alt) + @ 64 , $ 36 , # 35 </v8:content>
+													<v8:content>спецсимволы :  $,#, __.,__ф __п;  (Alt) + $ 36 , # 35 </v8:content>
 												</v8:item>
 											</Title>
 											<TitleLocation>Bottom</TitleLocation>
@@ -776,7 +766,7 @@
 						</v8:item>
 					</ToolTip>
 					<Picture>
-						<xr:Ref>StdPicture.ReportSettings</xr:Ref>
+						<xr:Ref>StdPicture.LoadReportSettings</xr:Ref>
 						<xr:LoadTransparent>true</xr:LoadTransparent>
 					</Picture>
 					<ShowTitle>false</ShowTitle>
@@ -957,16 +947,70 @@
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Группа к3</v8:content>
+									<v8:content>Создание или удаление регламентного задания. (для более подробной информации нажмите  F1)</v8:content>
 								</v8:item>
 							</ToolTip>
+							<ToolTipRepresentation>ShowTop</ToolTipRepresentation>
 							<Group>Vertical</Group>
 							<Behavior>Collapsible</Behavior>
 							<Collapsed>true</Collapsed>
 							<Representation>NormalSeparation</Representation>
 							<ExtendedTooltip name="ГруппаК3РасширеннаяПодсказка" id="522"/>
 							<ChildItems>
+								<UsualGroup name="грРасширение" id="629">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content> </v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Гр расширение</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Collapsible</Behavior>
+									<Collapsed>true</Collapsed>
+									<Representation>NormalSeparation</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="грРасширениеРасширеннаяПодсказка" id="630"/>
+									<ChildItems>
+										<CheckBoxField name="РегламентноеЗадание" id="621">
+											<DataPath>Объект.РегламентноеЗадание</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>признак установленного регламентного задания</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="РегламентноеЗаданиеКонтекстноеМеню" id="622"/>
+											<ExtendedTooltip name="РегламентноеЗаданиеРасширеннаяПодсказка" id="623"/>
+											<Events>
+												<Event name="OnChange">РегламентноеЗаданиеПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<InputField name="ИдентификаторРегламентногоЗадания" id="624">
+											<DataPath>Объект.ИдентификаторРегламентногоЗадания</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>идентификатор  команды </v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<ClearButton>true</ClearButton>
+											<ContextMenu name="ИдентификаторРегламентногоЗаданияКонтекстноеМеню" id="625"/>
+											<ExtendedTooltip name="ИдентификаторРегламентногоЗаданияРасширеннаяПодсказка" id="626"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
 								<UsualGroup name="грКонфигурация" id="627">
+									<Visible>false</Visible>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -994,40 +1038,6 @@
 											<CommandName>Form.Command.УдалитьРегламентноеЗадание</CommandName>
 											<ExtendedTooltip name="УдалитьРегламентноеЗадание1РасширеннаяПодсказка" id="535"/>
 										</Button>
-									</ChildItems>
-								</UsualGroup>
-								<UsualGroup name="грРасширение" id="629">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Расширение</v8:content>
-										</v8:item>
-									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Гр расширение</v8:content>
-										</v8:item>
-									</ToolTip>
-									<Behavior>Collapsible</Behavior>
-									<Collapsed>true</Collapsed>
-									<ExtendedTooltip name="грРасширениеРасширеннаяПодсказка" id="630"/>
-									<ChildItems>
-										<CheckBoxField name="РегламентноеЗадание" id="621">
-											<DataPath>Объект.РегламентноеЗадание</DataPath>
-											<CheckBoxType>Auto</CheckBoxType>
-											<ContextMenu name="РегламентноеЗаданиеКонтекстноеМеню" id="622"/>
-											<ExtendedTooltip name="РегламентноеЗаданиеРасширеннаяПодсказка" id="623"/>
-											<Events>
-												<Event name="OnChange">РегламентноеЗаданиеПриИзменении</Event>
-											</Events>
-										</CheckBoxField>
-										<InputField name="ИдентификаторРегламентногоЗадания" id="624">
-											<DataPath>Объект.ИдентификаторРегламентногоЗадания</DataPath>
-											<ClearButton>true</ClearButton>
-											<ContextMenu name="ИдентификаторРегламентногоЗаданияКонтекстноеМеню" id="625"/>
-											<ExtendedTooltip name="ИдентификаторРегламентногоЗаданияРасширеннаяПодсказка" id="626"/>
-										</InputField>
 									</ChildItems>
 								</UsualGroup>
 							</ChildItems>
@@ -1100,7 +1110,7 @@
 						</v8:item>
 					</ToolTip>
 					<Picture>
-						<xr:Ref>StdPicture.ExternalDataSourceCube</xr:Ref>
+						<xr:Ref>StdPicture.GotoURL</xr:Ref>
 						<xr:LoadTransparent>true</xr:LoadTransparent>
 					</Picture>
 					<ShowTitle>false</ShowTitle>
@@ -1905,6 +1915,7 @@
 					<v8:content>Форматировать текст</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Shortcut>Ctrl+Alt+F</Shortcut>
 			<Picture>
 				<xr:Ref>StdPicture.GanttChart</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
@@ -1983,6 +1994,10 @@
 					<v8:content>Выбрать декоратор</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Rename</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>ВыбратьДекоратор</Action>
 			<Representation>TextPicture</Representation>
 		</Command>
