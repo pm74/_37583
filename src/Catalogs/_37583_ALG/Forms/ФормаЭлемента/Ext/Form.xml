@@ -53,6 +53,11 @@
 				</Title>
 				<ExtendedTooltip name="ОткрытьЖурналРегистрацииРасширеннаяПодсказка" id="128"/>
 			</Button>
+			<Button name="ФормаСправка" id="841">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Help</CommandName>
+				<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="842"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -1188,7 +1193,7 @@
 									<ExtendedTooltip name="ПрограммныйИнтерфейсТипПараметраРасширеннаяПодсказка" id="662"/>
 								</InputField>
 								<InputField name="ПрограммныйИнтерфейсДействие" id="733">
-									<DataPath>Объект.ПрограммныйИнтерфейс.ПоУмолчанию</DataPath>
+									<DataPath>Объект.ПрограммныйИнтерфейс.ЗначениеПоУмолчанию</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ChoiceButton>true</ChoiceButton>
 									<ContextMenu name="ПрограммныйИнтерфейсДействиеКонтекстноеМеню" id="734"/>

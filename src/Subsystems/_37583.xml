@@ -21,7 +21,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog._37583_ALG</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor._37583_ВнешняяОбработкаОбновитьРегламентныеЗадания</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor._37583_НастройкаИспользованияДляПользователейИГруппДоступа</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">HTTPService.HTTP_ALG_UNF</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">HTTPService.HTTP_ALG</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

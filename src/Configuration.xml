@@ -92,7 +92,7 @@
 			<CommonModule>_37583_ОбщегоНазначенияКлиентСервер</CommonModule>
 			<CommonModule>_37583_СтандартныеПодсистемы</CommonModule>
 			<CommonModule>ПодключаемыеКомандыПереопределяемый</CommonModule>
-			<HTTPService>HTTP_ALG_UNF</HTTPService>
+			<HTTPService>HTTP_ALG</HTTPService>
 			<Catalog>_37583_ALG</Catalog>
 			<DataProcessor>_37583_ИмпортЭкспорт</DataProcessor>
 			<DataProcessor>_37583_ВнешняяОбработкаОбновитьРегламентныеЗадания</DataProcessor>

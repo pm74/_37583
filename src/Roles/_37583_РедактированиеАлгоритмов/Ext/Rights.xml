@@ -105,7 +105,7 @@
 		</right>
 	</object>
 	<object>
-		<name>HTTPService.HTTP_ALG_UNF.URLTemplate._37583_ALG.Method.GET</name>
+		<name>HTTPService.HTTP_ALG.URLTemplate._37583_ALG.Method.GET</name>
 		<right>
 			<name>Use</name>
 			<value>true</value>
@@ -233,7 +233,7 @@
 		</right>
 	</object>
 	<object>
-		<name>HTTPService.HTTP_ALG_UNF.URLTemplate._37583_ALG.Method.POST</name>
+		<name>HTTPService.HTTP_ALG.URLTemplate._37583_ALG.Method.POST</name>
 		<right>
 			<name>Use</name>
 			<value>true</value>

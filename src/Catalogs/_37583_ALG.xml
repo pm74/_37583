@@ -1741,11 +1741,11 @@
 					</Attribute>
 					<Attribute uuid="0cf572c4-7575-11e9-9197-002522f8f390">
 						<Properties>
-							<Name>ПоУмолчанию</Name>
+							<Name>ЗначениеПоУмолчанию</Name>
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>По умолчанию</v8:content>
+									<v8:content>Значение по умолчанию</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
@@ -1839,11 +1839,7 @@
 									<xr:ValueChange>Clear</xr:ValueChange>
 								</xr:Link>
 							</ChoiceParameterLinks>
-							<ChoiceParameters>
-								<app:item name="Отбор.НаКлиенте">
-									<app:value xsi:type="xs:boolean">false</app:value>
-								</app:item>
-							</ChoiceParameters>
+							<ChoiceParameters/>
 							<QuickChoice>Auto</QuickChoice>
 							<CreateOnInput>Auto</CreateOnInput>
 							<ChoiceForm/>
