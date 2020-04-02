@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
 	<Configuration uuid="143be4b6-6f4c-11e9-1495-002522f8f390">
 		<InternalInfo>
 			<xr:ContainedObject>
@@ -28,7 +28,7 @@
 			</xr:ContainedObject>
 		</InternalInfo>
 		<Properties>
-			<Name>_37583_</Name>
+			<Name>Алгоритмы</Name>
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -38,6 +38,7 @@
 			<Comment/>
 			<ConfigurationExtensionPurpose>AddOn</ConfigurationExtensionPurpose>
 			<ObjectBelonging>Adopted</ObjectBelonging>
+			<KeepMappingToExtendedConfigurationObjectsByIDs>true</KeepMappingToExtendedConfigurationObjectsByIDs>
 			<NamePrefix>_37583_</NamePrefix>
 			<ConfigurationExtensionCompatibilityMode>Version8_3_12</ConfigurationExtensionCompatibilityMode>
 			<DefaultRunMode>ManagedApplication</DefaultRunMode>
@@ -82,6 +83,8 @@
 			<CommonPicture>_375836</CommonPicture>
 			<CommonPicture>_375837</CommonPicture>
 			<CommonPicture>_375838</CommonPicture>
+			<CommonPicture>_37583_Git</CommonPicture>
+			<CommonPicture>_37583_git_thumb</CommonPicture>
 			<Role>_37583_ИспользованиеАлгоритмов</Role>
 			<Role>_37583_РедактированиеАлгоритмов</Role>
 			<Role>Администрирование</Role>
@@ -94,10 +97,12 @@
 			<CommonModule>ПодключаемыеКомандыПереопределяемый</CommonModule>
 			<HTTPService>HTTP_ALG</HTTPService>
 			<Catalog>_37583_ALG</Catalog>
+			<Catalog>_37583_Репозитории_GitHub</Catalog>
 			<DataProcessor>_37583_ИмпортЭкспорт</DataProcessor>
 			<DataProcessor>_37583_ВнешняяОбработкаОбновитьРегламентныеЗадания</DataProcessor>
 			<DataProcessor>_37583_НастройкаИспользованияДляПользователейИГруппДоступа</DataProcessor>
 			<DataProcessor>_37583_ОбработкаКоманды</DataProcessor>
+			<InformationRegister>_37583_ИсторияКоммитов</InformationRegister>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>

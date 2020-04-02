@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
@@ -328,6 +328,7 @@
 										</v8:item>
 									</ToolTip>
 									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаТекст1РасширеннаяПодсказка" id="808"/>
 									<ChildItems>
 										<InputField name="ТекстАлгоритма" id="111">
@@ -458,8 +459,9 @@
 								</v8:item>
 							</ToolTip>
 							<VerticalStretch>false</VerticalStretch>
-							<Behavior>Collapsible</Behavior>
+							<Behavior>PopUp</Behavior>
 							<Collapsed>true</Collapsed>
+							<ControlRepresentation>Picture</ControlRepresentation>
 							<Representation>None</Representation>
 							<ExtendedTooltip name="ГруппаДопРасширеннаяПодсказка" id="792"/>
 							<ChildItems>
@@ -478,6 +480,34 @@
 									</ToolTip>
 									<ExtendedTooltip name="ГруппаСтрРасширеннаяПодсказка" id="812"/>
 									<ChildItems>
+										<Page name="грКомментарий" id="813">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>комментарий</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Гр комментарий</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Height>5</Height>
+											<ExtendedTooltip name="грКомментарийРасширеннаяПодсказка" id="814"/>
+											<ChildItems>
+												<InputField name="Комментарий" id="109">
+													<DataPath>Объект.Комментарий</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<Height>5</Height>
+													<HorizontalStretch>true</HorizontalStretch>
+													<TextColor>web:SaddleBrown</TextColor>
+													<ContextMenu name="КомментарийКонтекстноеМеню" id="110"/>
+													<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="160"/>
+												</InputField>
+											</ChildItems>
+										</Page>
 										<Page name="грДекораторы" id="815">
 											<Title>
 												<v8:item>
@@ -494,9 +524,7 @@
 											<ExtendedTooltip name="грДекораторыРасширеннаяПодсказка" id="816"/>
 											<ChildItems>
 												<Table name="Декораторы" id="817">
-													<HeightInTableRows>4</HeightInTableRows>
 													<AutoInsertNewRow>true</AutoInsertNewRow>
-													<VerticalStretch>false</VerticalStretch>
 													<EnableStartDrag>true</EnableStartDrag>
 													<EnableDrag>true</EnableDrag>
 													<DataPath>Объект.Декораторы</DataPath>
@@ -545,33 +573,73 @@
 												</Table>
 											</ChildItems>
 										</Page>
-										<Page name="грКомментарий" id="813">
+										<Page name="грRelationship" id="843">
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>комментарий</v8:content>
+													<v8:content>Requarements</v8:content>
 												</v8:item>
 											</Title>
 											<ToolTip>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Гр комментарий</v8:content>
+													<v8:content>Гр relationship</v8:content>
 												</v8:item>
 											</ToolTip>
-											<Height>5</Height>
-											<ExtendedTooltip name="грКомментарийРасширеннаяПодсказка" id="814"/>
+											<Picture>
+												<xr:Ref>StdPicture.GotoURL</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ExtendedTooltip name="грRelationshipРасширеннаяПодсказка" id="844"/>
 											<ChildItems>
-												<InputField name="Комментарий" id="109">
-													<DataPath>Объект.Комментарий</DataPath>
-													<TitleLocation>None</TitleLocation>
-													<AutoMaxWidth>false</AutoMaxWidth>
-													<Height>5</Height>
-													<HorizontalStretch>true</HorizontalStretch>
-													<TextColor>web:SaddleBrown</TextColor>
-													<Font ref="sys:OEMFixedFont" kind="WindowsFont"/>
-													<ContextMenu name="КомментарийКонтекстноеМеню" id="110"/>
-													<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="160"/>
-												</InputField>
+												<Table name="Requarements" id="845">
+													<AutoInsertNewRow>true</AutoInsertNewRow>
+													<EnableStartDrag>true</EnableStartDrag>
+													<EnableDrag>true</EnableDrag>
+													<DataPath>Объект.Requarements</DataPath>
+													<RowFilter xsi:nil="true"/>
+													<ContextMenu name="RequarementsКонтекстноеМеню" id="846"/>
+													<AutoCommandBar name="RequarementsКоманднаяПанель" id="847"/>
+													<ExtendedTooltip name="RequarementsРасширеннаяПодсказка" id="848"/>
+													<SearchStringAddition name="RequarementsСтрокаПоиска" id="849">
+														<AdditionSource>
+															<Item>Requarements</Item>
+															<Type>SearchStringRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="RequarementsСтрокаПоискаКонтекстноеМеню" id="850"/>
+														<ExtendedTooltip name="RequarementsСтрокаПоискаРасширеннаяПодсказка" id="851"/>
+													</SearchStringAddition>
+													<ViewStatusAddition name="RequarementsСостояниеПросмотра" id="852">
+														<AdditionSource>
+															<Item>Requarements</Item>
+															<Type>ViewStatusRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="RequarementsСостояниеПросмотраКонтекстноеМеню" id="853"/>
+														<ExtendedTooltip name="RequarementsСостояниеПросмотраРасширеннаяПодсказка" id="854"/>
+													</ViewStatusAddition>
+													<SearchControlAddition name="RequarementsУправлениеПоиском" id="855">
+														<AdditionSource>
+															<Item>Requarements</Item>
+															<Type>SearchControl</Type>
+														</AdditionSource>
+														<ContextMenu name="RequarementsУправлениеПоискомКонтекстноеМеню" id="856"/>
+														<ExtendedTooltip name="RequarementsУправлениеПоискомРасширеннаяПодсказка" id="857"/>
+													</SearchControlAddition>
+													<ChildItems>
+														<LabelField name="RequarementsНомерСтроки" id="858">
+															<DataPath>Объект.Requarements.LineNumber</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<ContextMenu name="RequarementsНомерСтрокиКонтекстноеМеню" id="859"/>
+															<ExtendedTooltip name="RequarementsНомерСтрокиРасширеннаяПодсказка" id="860"/>
+														</LabelField>
+														<InputField name="RequarementsRelation" id="861">
+															<DataPath>Объект.Requarements.Reference</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<ContextMenu name="RequarementsRelationКонтекстноеМеню" id="862"/>
+															<ExtendedTooltip name="RequarementsRelationРасширеннаяПодсказка" id="863"/>
+														</InputField>
+													</ChildItems>
+												</Table>
 											</ChildItems>
 										</Page>
 									</ChildItems>
@@ -771,7 +839,7 @@
 						</v8:item>
 					</ToolTip>
 					<Picture>
-						<xr:Ref>StdPicture.LoadReportSettings</xr:Ref>
+						<xr:Ref>StdPicture.QueryWizardTableParameters</xr:Ref>
 						<xr:LoadTransparent>true</xr:LoadTransparent>
 					</Picture>
 					<ShowTitle>false</ShowTitle>
@@ -810,7 +878,7 @@
 									<Group>Vertical</Group>
 									<Behavior>Collapsible</Behavior>
 									<Collapsed>true</Collapsed>
-									<Representation>None</Representation>
+									<Representation>StrongSeparation</Representation>
 									<ExtendedTooltip name="ГрСерверРасширеннаяПодсказка" id="547"/>
 									<ChildItems>
 										<CheckBoxField name="Кэшировать" id="518">
@@ -856,7 +924,7 @@
 									<Group>Vertical</Group>
 									<Behavior>Collapsible</Behavior>
 									<Collapsed>true</Collapsed>
-									<Representation>None</Representation>
+									<Representation>StrongSeparation</Representation>
 									<ExtendedTooltip name="ГрКлиентРасширеннаяПодсказка" id="545"/>
 									<ChildItems>
 										<CheckBoxField name="НаКлиенте" id="390">
@@ -894,7 +962,7 @@
 									<Group>Vertical</Group>
 									<Behavior>Collapsible</Behavior>
 									<Collapsed>true</Collapsed>
-									<Representation>None</Representation>
+									<Representation>StrongSeparation</Representation>
 									<ExtendedTooltip name="грОбщиеРасширеннаяПодсказка" id="558"/>
 									<ChildItems>
 										<CheckBoxField name="Интерфейс" id="559">
@@ -957,8 +1025,9 @@
 							</ToolTip>
 							<ToolTipRepresentation>ShowTop</ToolTipRepresentation>
 							<Group>Vertical</Group>
-							<Behavior>Collapsible</Behavior>
+							<Behavior>PopUp</Behavior>
 							<Collapsed>true</Collapsed>
+							<ControlRepresentation>Picture</ControlRepresentation>
 							<Representation>NormalSeparation</Representation>
 							<ExtendedTooltip name="ГруппаК3РасширеннаяПодсказка" id="522"/>
 							<ChildItems>
@@ -1061,8 +1130,9 @@
 								</v8:item>
 							</ToolTip>
 							<Group>Vertical</Group>
-							<Behavior>Collapsible</Behavior>
+							<Behavior>PopUp</Behavior>
 							<Collapsed>true</Collapsed>
+							<ControlRepresentation>Picture</ControlRepresentation>
 							<ExtendedTooltip name="ГрОформлениеРасширеннаяПодсказка" id="541"/>
 							<ChildItems>
 								<InputField name="ЦветФона" id="509">
@@ -1099,6 +1169,52 @@
 							<ContextMenu name="ТегиКонтекстноеМеню" id="566"/>
 							<ExtendedTooltip name="ТегиРасширеннаяПодсказка" id="567"/>
 						</InputField>
+						<UsualGroup name="ГрGitHub" id="864">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>GitHub</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Git Hub</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Behavior>PopUp</Behavior>
+							<Collapsed>true</Collapsed>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="ГрGitHubРасширеннаяПодсказка" id="865"/>
+							<ChildItems>
+								<InputField name="git_repo" id="872">
+									<DataPath>Объект.Репозиторий</DataPath>
+									<ContextMenu name="git_repoКонтекстноеМеню" id="873"/>
+									<ExtendedTooltip name="git_repoРасширеннаяПодсказка" id="874"/>
+								</InputField>
+								<InputField name="Path" id="869">
+									<DataPath>Объект.git_path</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Path</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="PathКонтекстноеМеню" id="870"/>
+									<ExtendedTooltip name="PathРасширеннаяПодсказка" id="871"/>
+								</InputField>
+								<InputField name="Сopyright" id="866">
+									<ContextMenu name="СopyrightКонтекстноеМеню" id="867"/>
+									<ExtendedTooltip name="СopyrightРасширеннаяПодсказка" id="868"/>
+								</InputField>
+								<InputField name="git_node_id" id="875">
+									<DataPath>1/0:637dcdc8-7a6d-4f75-8d92-2d615fdb448a</DataPath>
+									<ContextMenu name="git_node_idКонтекстноеМеню" id="876"/>
+									<ExtendedTooltip name="git_node_idРасширеннаяПодсказка" id="877"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
 					</ChildItems>
 				</Page>
 				<Page name="ГруппаAPI" id="573">
@@ -1115,7 +1231,7 @@
 						</v8:item>
 					</ToolTip>
 					<Picture>
-						<xr:Ref>StdPicture.GotoURL</xr:Ref>
+						<xr:Ref>StdPicture.AppearanceBoxesTwoFilled</xr:Ref>
 						<xr:LoadTransparent>true</xr:LoadTransparent>
 					</Picture>
 					<ShowTitle>false</ShowTitle>
