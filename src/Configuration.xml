@@ -83,8 +83,10 @@
 			<CommonPicture>_375836</CommonPicture>
 			<CommonPicture>_375837</CommonPicture>
 			<CommonPicture>_375838</CommonPicture>
-			<CommonPicture>_37583_Git</CommonPicture>
+			<CommonPicture>_37583_Algo</CommonPicture>
 			<CommonPicture>_37583_git_thumb</CommonPicture>
+			<CommonPicture>_37583_Иерархия</CommonPicture>
+			<CommonPicture>_37583_Algo_thumb</CommonPicture>
 			<Role>_37583_ИспользованиеАлгоритмов</Role>
 			<Role>_37583_РедактированиеАлгоритмов</Role>
 			<Role>Администрирование</Role>
@@ -95,14 +97,18 @@
 			<CommonModule>_37583_ОбщегоНазначенияКлиентСервер</CommonModule>
 			<CommonModule>_37583_СтандартныеПодсистемы</CommonModule>
 			<CommonModule>ПодключаемыеКомандыПереопределяемый</CommonModule>
+			<XDTOPackage>_37583_GitHub</XDTOPackage>
 			<HTTPService>HTTP_ALG</HTTPService>
 			<Catalog>_37583_ALG</Catalog>
 			<Catalog>_37583_Репозитории_GitHub</Catalog>
+			<Catalog>_37583_АвторыИзменений</Catalog>
 			<DataProcessor>_37583_ИмпортЭкспорт</DataProcessor>
 			<DataProcessor>_37583_ВнешняяОбработкаОбновитьРегламентныеЗадания</DataProcessor>
 			<DataProcessor>_37583_НастройкаИспользованияДляПользователейИГруппДоступа</DataProcessor>
 			<DataProcessor>_37583_ОбработкаКоманды</DataProcessor>
+			<DataProcessor>_37583_СинхронизацияGit</DataProcessor>
 			<InformationRegister>_37583_ИсторияКоммитов</InformationRegister>
+			<InformationRegister>_37583_ИераррхияПакетов</InformationRegister>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>

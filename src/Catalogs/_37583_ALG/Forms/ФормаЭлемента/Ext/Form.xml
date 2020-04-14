@@ -638,6 +638,12 @@
 															<ContextMenu name="RequarementsRelationКонтекстноеМеню" id="862"/>
 															<ExtendedTooltip name="RequarementsRelationРасширеннаяПодсказка" id="863"/>
 														</InputField>
+														<InputField name="RequarementsPath" id="878">
+															<DataPath>1/0:84ecfb1f-d3b8-4316-af95-1f1ab6aeba1b/0:e32792a7-03be-4768-9294-341e94425ab0/0:57646b3f-b369-411a-8fa6-0d87269ac0b1</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<ContextMenu name="RequarementsPathКонтекстноеМеню" id="879"/>
+															<ExtendedTooltip name="RequarementsPathРасширеннаяПодсказка" id="880"/>
+														</InputField>
 													</ChildItems>
 												</Table>
 											</ChildItems>
@@ -1116,6 +1122,57 @@
 								</UsualGroup>
 							</ChildItems>
 						</UsualGroup>
+						<InputField name="Теги" id="565">
+							<DataPath>Объект.Теги</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ChoiceButton>true</ChoiceButton>
+							<TextColor>#006B00</TextColor>
+							<ContextMenu name="ТегиКонтекстноеМеню" id="566"/>
+							<ExtendedTooltip name="ТегиРасширеннаяПодсказка" id="567"/>
+						</InputField>
+						<UsualGroup name="ГрGitHub" id="864">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>GitHub</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Git Hub</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>PopUp</Behavior>
+							<Collapsed>true</Collapsed>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="ГрGitHubРасширеннаяПодсказка" id="865"/>
+							<ChildItems>
+								<InputField name="REPO" id="875">
+									<DataPath>Объект.REPO</DataPath>
+									<ContextMenu name="REPOКонтекстноеМеню" id="876"/>
+									<ExtendedTooltip name="REPOРасширеннаяПодсказка" id="877"/>
+								</InputField>
+								<InputField name="PATH" id="869">
+									<DataPath>Объект.PATH</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>PATH</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="PATHКонтекстноеМеню" id="870"/>
+									<ExtendedTooltip name="PATHРасширеннаяПодсказка" id="871"/>
+								</InputField>
+								<InputField name="SHA" id="881">
+									<DataPath>SHA</DataPath>
+									<ContextMenu name="SHAКонтекстноеМеню" id="882"/>
+									<ExtendedTooltip name="SHAРасширеннаяПодсказка" id="883"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
 						<UsualGroup name="ГрОформление" id="540">
 							<Title>
 								<v8:item>
@@ -1158,60 +1215,6 @@
 									<Events>
 										<Event name="OnChange">ШрифтПриИзменении</Event>
 									</Events>
-								</InputField>
-							</ChildItems>
-						</UsualGroup>
-						<InputField name="Теги" id="565">
-							<DataPath>Объект.Теги</DataPath>
-							<AutoMaxWidth>false</AutoMaxWidth>
-							<ChoiceButton>true</ChoiceButton>
-							<TextColor>#006B00</TextColor>
-							<ContextMenu name="ТегиКонтекстноеМеню" id="566"/>
-							<ExtendedTooltip name="ТегиРасширеннаяПодсказка" id="567"/>
-						</InputField>
-						<UsualGroup name="ГрGitHub" id="864">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>GitHub</v8:content>
-								</v8:item>
-							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Git Hub</v8:content>
-								</v8:item>
-							</ToolTip>
-							<Behavior>PopUp</Behavior>
-							<Collapsed>true</Collapsed>
-							<ControlRepresentation>Picture</ControlRepresentation>
-							<Representation>StrongSeparation</Representation>
-							<ExtendedTooltip name="ГрGitHubРасширеннаяПодсказка" id="865"/>
-							<ChildItems>
-								<InputField name="git_repo" id="872">
-									<DataPath>Объект.Репозиторий</DataPath>
-									<ContextMenu name="git_repoКонтекстноеМеню" id="873"/>
-									<ExtendedTooltip name="git_repoРасширеннаяПодсказка" id="874"/>
-								</InputField>
-								<InputField name="Path" id="869">
-									<DataPath>Объект.git_path</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Path</v8:content>
-										</v8:item>
-									</Title>
-									<ContextMenu name="PathКонтекстноеМеню" id="870"/>
-									<ExtendedTooltip name="PathРасширеннаяПодсказка" id="871"/>
-								</InputField>
-								<InputField name="Сopyright" id="866">
-									<ContextMenu name="СopyrightКонтекстноеМеню" id="867"/>
-									<ExtendedTooltip name="СopyrightРасширеннаяПодсказка" id="868"/>
-								</InputField>
-								<InputField name="git_node_id" id="875">
-									<DataPath>1/0:637dcdc8-7a6d-4f75-8d92-2d615fdb448a</DataPath>
-									<ContextMenu name="git_node_idКонтекстноеМеню" id="876"/>
-									<ExtendedTooltip name="git_node_idРасширеннаяПодсказка" id="877"/>
 								</InputField>
 							</ChildItems>
 						</UsualGroup>
@@ -1693,39 +1696,6 @@
 			</Type>
 			<SavedData>true</SavedData>
 		</Attribute>
-		<Attribute name="сПаттерн" id="27">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Паттерн</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>v8:ValueListType</v8:Type>
-			</Type>
-		</Attribute>
-		<Attribute name="сШаблоны" id="28">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>С шаблоны</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>v8:ValueListType</v8:Type>
-			</Type>
-		</Attribute>
-		<Attribute name="сСправка" id="29">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Комментарии к шаблонам</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>v8:ValueListType</v8:Type>
-			</Type>
-		</Attribute>
 		<Attribute name="СписокВыбораМетаданых" id="30">
 			<Title>
 				<v8:item>
@@ -1735,6 +1705,21 @@
 			</Title>
 			<Type>
 				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="SHA" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>SHA</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>40</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
 		<ConditionalAppearance>

@@ -1,0 +1,27 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="urn:37583/packages">
+	<import namespace="http://v8.1c.ru/8.1/data/core"/>
+	<valueType name="СписокСтрок" base="xs:string" variety="List" itemType="xs:string"/>
+	<objectType name="alg37583" open="true">
+		<property xmlns:d3p1="urn:37583/packages" name="_Repo" type="d3p1:Repo" form="Element" localName="Repo"/>
+		<property name="Path" type="xs:string" nillable="false"/>
+		<property name="Sha" type="xs:string" nillable="true" default="&quot;&quot;"/>
+		<property name="Tags" type="xs:string" default="&quot;&quot;" form="Element"/>
+		<property name="Comment" type="xs:string" default="&quot;&quot;" form="Element"/>
+		<property name="Text" type="xs:string" default="&quot;&quot;"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="ValueStorage" type="d3p1:ValueStorage"/>
+		<property xmlns:d3p1="urn:37583/packages" name="Decorators" type="d3p1:СписокСтрок"/>
+		<property xmlns:d3p1="urn:37583/packages" name="Requirements" type="d3p1:СписокСтрок"/>
+	</objectType>
+	<objectType name="Repo">
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="Ref" type="d3p1:UUID" nillable="false"/>
+		<property name="URI" type="xs:anyURI"/>
+		<property name="Author" type="xs:string" default="&quot;&quot;"/>
+	</objectType>
+	<objectType name="Commit">
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="sha" type="d3p1:UUID" nillable="true"/>
+		<property name="path" type="xs:string"/>
+		<property name="message" type="xs:string"/>
+		<property name="content" type="xs:string"/>
+		<property name="author" type="xs:string"/>
+	</objectType>
+</package>

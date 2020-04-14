@@ -47,6 +47,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Catalog._37583_АвторыИзменений</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>HTTPService.HTTP_ALG.URLTemplate._37583_ALG.Method.GET</name>
 		<right>
 			<name>Use</name>

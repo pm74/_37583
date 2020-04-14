@@ -6,20 +6,25 @@
 				<xr:Common>true</xr:Common>
 				<xr:Value name="Role._37583_РедактированиеАлгоритмов">true</xr:Value>
 				<xr:Value name="Role._37583_ИспользованиеАлгоритмов">false</xr:Value>
-				<xr:Value name="39c48e0c-6f6c-11e9-078d-002522f8f390">false</xr:Value>
 			</Visibility>
 		</Command>
-		<Command name="0:6e4e9236-6f4d-11e9-1495-002522f8f390">
+		<Command name="DataProcessor._37583_ИмпортЭкспорт.StandardCommand.Open">
 			<Visibility>
-				<xr:Common>false</xr:Common>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role._37583_РедактированиеАлгоритмов">true</xr:Value>
 			</Visibility>
 		</Command>
 		<Command name="DataProcessor._37583_НастройкаИспользованияДляПользователейИГруппДоступа.StandardCommand.Open">
 			<Visibility>
 				<xr:Common>true</xr:Common>
 				<xr:Value name="Role._37583_ИспользованиеАлгоритмов">false</xr:Value>
-				<xr:Value name="Role._37583_РедактированиеАлгоритмов">false</xr:Value>
-				<xr:Value name="39c48e0c-6f6c-11e9-078d-002522f8f390">true</xr:Value>
+				<xr:Value name="Role._37583_РедактированиеАлгоритмов">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor._37583_СинхронизацияGit.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role._37583_РедактированиеАлгоритмов">true</xr:Value>
 			</Visibility>
 		</Command>
 	</CommandsVisibility>

@@ -10,8 +10,8 @@
 				</v8:item>
 			</Synonym>
 			<Comment/>
-			<AvailabilityForChoice>false</AvailabilityForChoice>
-			<AvailabilityForAppearance>false</AvailabilityForAppearance>
+			<AvailabilityForChoice>true</AvailabilityForChoice>
+			<AvailabilityForAppearance>true</AvailabilityForAppearance>
 		</Properties>
 	</CommonPicture>
 </MetaDataObject>

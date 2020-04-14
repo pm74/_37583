@@ -14,7 +14,7 @@
 			<IncludeInCommandInterface>true</IncludeInCommandInterface>
 			<Explanation/>
 			<Picture>
-				<xr:Ref>CommonPicture._37583_Git</xr:Ref>
+				<xr:Ref>CommonPicture._37583_Algo</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Content>
@@ -24,6 +24,10 @@
 				<xr:Item xsi:type="xr:MDObjectRef">HTTPService.HTTP_ALG</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog._37583_Репозитории_GitHub</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister._37583_ИсторияКоммитов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor._37583_СинхронизацияGit</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor._37583_ИмпортЭкспорт</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister._37583_ИераррхияПакетов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog._37583_АвторыИзменений</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>
