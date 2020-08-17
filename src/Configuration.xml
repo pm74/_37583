@@ -75,10 +75,10 @@
 		<ChildObjects>
 			<Language>Русский</Language>
 			<Subsystem>_37583</Subsystem>
+			<CommonPicture>_37583_actor</CommonPicture>
 			<CommonPicture>_37583_Assistent</CommonPicture>
 			<CommonPicture>_37583_Робот</CommonPicture>
 			<CommonPicture>_375832</CommonPicture>
-			<CommonPicture>_375834</CommonPicture>
 			<CommonPicture>_375835</CommonPicture>
 			<CommonPicture>_375836</CommonPicture>
 			<CommonPicture>_375837</CommonPicture>
@@ -87,6 +87,8 @@
 			<CommonPicture>_37583_git_thumb</CommonPicture>
 			<CommonPicture>_37583_Иерархия</CommonPicture>
 			<CommonPicture>_37583_Algo_thumb</CommonPicture>
+			<CommonPicture>_37583_Algo_thumb2</CommonPicture>
+			<Role>_37583_ОсновнаяРоль</Role>
 			<Role>_37583_ИспользованиеАлгоритмов</Role>
 			<Role>_37583_РедактированиеАлгоритмов</Role>
 			<Role>Администрирование</Role>
@@ -95,18 +97,19 @@
 			<CommonModule>_37583_АлгоритмыКэш</CommonModule>
 			<CommonModule>_37583_АлгоритмыКлиент</CommonModule>
 			<CommonModule>_37583_ОбщегоНазначенияКлиентСервер</CommonModule>
-			<CommonModule>_37583_СтандартныеПодсистемы</CommonModule>
+			<CommonModule>_37583_И_СтандартныеПодсистемы</CommonModule>
+			<CommonModule>_37583_ПодключаемыеКомандыИОбработчики</CommonModule>
 			<CommonModule>ПодключаемыеКомандыПереопределяемый</CommonModule>
 			<XDTOPackage>_37583_GitHub</XDTOPackage>
 			<HTTPService>HTTP_ALG</HTTPService>
 			<Catalog>_37583_ALG</Catalog>
 			<Catalog>_37583_Репозитории_GitHub</Catalog>
-			<Catalog>_37583_АвторыИзменений</Catalog>
 			<DataProcessor>_37583_ИмпортЭкспорт</DataProcessor>
 			<DataProcessor>_37583_ВнешняяОбработкаОбновитьРегламентныеЗадания</DataProcessor>
 			<DataProcessor>_37583_НастройкаИспользованияДляПользователейИГруппДоступа</DataProcessor>
 			<DataProcessor>_37583_ОбработкаКоманды</DataProcessor>
 			<DataProcessor>_37583_СинхронизацияGit</DataProcessor>
+			<DataProcessor>КонсольКода</DataProcessor>
 			<InformationRegister>_37583_ИсторияКоммитов</InformationRegister>
 			<InformationRegister>_37583_ИераррхияПакетов</InformationRegister>
 		</ChildObjects>

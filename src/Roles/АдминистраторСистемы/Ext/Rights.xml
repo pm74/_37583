@@ -27,6 +27,17 @@
 		</right>
 	</object>
 	<object>
+		<name>DataProcessor._37583_СинхронизацияGit</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>DataProcessor._37583_НастройкаИспользованияДляПользователейИГруппДоступа</name>
 		<right>
 			<name>Use</name>

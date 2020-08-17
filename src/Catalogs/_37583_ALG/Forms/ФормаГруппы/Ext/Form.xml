@@ -16,12 +16,6 @@
 			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
 			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
 		</InputField>
-		<InputField name="Родитель" id="7">
-			<DataPath>Объект.Parent</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<ContextMenu name="РодительКонтекстноеМеню" id="8"/>
-			<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="9"/>
-		</InputField>
 		<UsualGroup name="ГрGitHub" id="10">
 			<Title>
 				<v8:item>
@@ -35,38 +29,22 @@
 					<v8:content>Git Hub</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Behavior>PopUp</Behavior>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
 			<Collapsed>true</Collapsed>
 			<ControlRepresentation>Picture</ControlRepresentation>
 			<Representation>StrongSeparation</Representation>
 			<ExtendedTooltip name="ГрGitHubРасширеннаяПодсказка" id="11"/>
 			<ChildItems>
-				<InputField name="Repo" id="12">
-					<DataPath>1/0:31e94b10-8ec6-49da-a068-cdf8a5ad4ea9</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Repo</v8:content>
-						</v8:item>
-					</Title>
-					<ContextMenu name="RepoКонтекстноеМеню" id="13"/>
-					<ExtendedTooltip name="RepoРасширеннаяПодсказка" id="14"/>
+				<InputField name="Репозиторий" id="21">
+					<DataPath>Объект.Репозиторий</DataPath>
+					<ContextMenu name="РепозиторийКонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="РепозиторийРасширеннаяПодсказка" id="23"/>
 				</InputField>
-				<InputField name="Path" id="15">
-					<DataPath>1/0:57646b3f-b369-411a-8fa6-0d87269ac0b1</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Path</v8:content>
-						</v8:item>
-					</Title>
-					<ContextMenu name="PathКонтекстноеМеню" id="16"/>
-					<ExtendedTooltip name="PathРасширеннаяПодсказка" id="17"/>
-				</InputField>
-				<InputField name="sha" id="18">
-					<DataPath>Объект.PATH</DataPath>
-					<ContextMenu name="shaКонтекстноеМеню" id="19"/>
-					<ExtendedTooltip name="shaРасширеннаяПодсказка" id="20"/>
+				<InputField name="Путь" id="18">
+					<DataPath>Объект.Путь</DataPath>
+					<ContextMenu name="ПутьКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="ПутьРасширеннаяПодсказка" id="20"/>
 				</InputField>
 			</ChildItems>
 		</UsualGroup>

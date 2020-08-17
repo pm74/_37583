@@ -1,0 +1,513 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Консоль кода</v8:content>
+		</v8:item>
+	</Title>
+	<Width>150</Width>
+	<Height>40</Height>
+	<WindowOpeningMode>LockWholeInterface</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<ShowTitle>false</ShowTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ЗаменитьВхождения" id="22">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ЗаменитьВхождения</CommandName>
+				<ExtendedTooltip name="ЗаменитьВхожденияРасширеннаяПодсказка" id="23"/>
+			</Button>
+			<Button name="КонструкторЗапроса" id="10">
+				<Type>CommandBarButton</Type>
+				<Enabled>false</Enabled>
+				<CommandName>Form.Command.КонструкторЗапроса</CommandName>
+				<ExtendedTooltip name="КонструкторЗапросаРасширеннаяПодсказка" id="11"/>
+			</Button>
+			<Button name="ВыполнитьНаКлиенте" id="12">
+				<Type>CommandBarButton</Type>
+				<Visible>false</Visible>
+				<Enabled>false</Enabled>
+				<CommandName>Form.Command.ВыполнитьНаКлиенте</CommandName>
+				<ExtendedTooltip name="ВыполнитьНаКлиентеРасширеннаяПодсказка" id="13"/>
+			</Button>
+			<Button name="ВыполнитьНаСервере" id="14">
+				<Type>CommandBarButton</Type>
+				<Visible>false</Visible>
+				<Enabled>false</Enabled>
+				<CommandName>Form.Command.ВыполнитьНаСервере</CommandName>
+				<ExtendedTooltip name="ВыполнитьНаСервереРасширеннаяПодсказка" id="15"/>
+			</Button>
+			<Button name="СохранитьВФайл" id="16">
+				<Type>CommandBarButton</Type>
+				<Visible>false</Visible>
+				<Enabled>false</Enabled>
+				<CommandName>Form.Command.СохранитьВФайл</CommandName>
+				<ExtendedTooltip name="СохранитьВФайлРасширеннаяПодсказка" id="17"/>
+			</Button>
+			<Button name="ЗагрузитьИзФайла" id="18">
+				<Type>CommandBarButton</Type>
+				<Visible>false</Visible>
+				<Enabled>false</Enabled>
+				<CommandName>Form.Command.ЗагрузитьИзФайла</CommandName>
+				<ExtendedTooltip name="ЗагрузитьИзФайлаРасширеннаяПодсказка" id="19"/>
+			</Button>
+			<Popup name="Тема" id="4">
+				<Enabled>false</Enabled>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Тема</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Тема</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="ТемаРасширеннаяПодсказка" id="5"/>
+				<ChildItems>
+					<Button name="СветлаяТема" id="6">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.СветлаяТема</CommandName>
+						<ExtendedTooltip name="СветлаяТемаРасширеннаяПодсказка" id="7"/>
+					</Button>
+					<Button name="ТемнаяТема" id="8">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ТемнаяТема</CommandName>
+						<ExtendedTooltip name="ТемнаяТемаРасширеннаяПодсказка" id="9"/>
+					</Button>
+				</ChildItems>
+			</Popup>
+			<Button name="ФормаЗагрузитьОписаниеАлгоритмов" id="34">
+				<Type>CommandBarButton</Type>
+				<Visible>false</Visible>
+				<CommandName>Form.Command.ЗагрузитьОписаниеАлгоритмов</CommandName>
+				<ExtendedTooltip name="ФормаЗагрузитьОписаниеАлгоритмовРасширеннаяПодсказка" id="35"/>
+			</Button>
+			<Button name="ФормаОК" id="24">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Сохранить</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Получить текст</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаОКРасширеннаяПодсказка" id="25"/>
+			</Button>
+			<Popup name="Тест" id="32">
+				<Visible>false</Visible>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Тест</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Тест</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="ТестРасширеннаяПодсказка" id="33"/>
+				<ChildItems>
+					<Button name="ЗагрузитьПользовательскиеСниппеты" id="28">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ЗагрузитьПользовательскиеФункции</CommandName>
+						<ExtendedTooltip name="ЗагрузитьПользовательскиеСниппетыРасширеннаяПодсказка" id="29"/>
+					</Button>
+					<Button name="ЗагрузитьПользовательскиеФункции" id="30">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ЗагрузитьПользовательскиеСниппеты</CommandName>
+						<ExtendedTooltip name="ЗагрузитьПользовательскиеФункцииРасширеннаяПодсказка" id="31"/>
+					</Button>
+				</ChildItems>
+			</Popup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<HTMLDocumentField name="HTML" id="1" DisplayImportance="VeryHigh">
+			<DataPath>HTML</DataPath>
+			<DefaultItem>true</DefaultItem>
+			<TitleLocation>None</TitleLocation>
+			<OnMainServerUnavalableBehavior>DontChangeBehavior</OnMainServerUnavalableBehavior>
+			<Width>80</Width>
+			<Height>39</Height>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<Output>Enable</Output>
+			<ContextMenu name="HTMLКонтекстноеМеню" id="2">
+				<Autofill>false</Autofill>
+			</ContextMenu>
+			<ExtendedTooltip name="HTMLРасширеннаяПодсказка" id="3"/>
+			<Events>
+				<Event name="DocumentComplete">HTMLДокументСформирован</Event>
+			</Events>
+		</HTMLDocumentField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.КонсольКода</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="HTML" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>HTML</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресДанных" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес данных</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КаталогИсходников" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Каталог исходников</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекстАлгоритма" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст алгоритма</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НаКлиенте" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На клиенте</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РежимРедакторАлгоритма" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим редактор алгоритма</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДокументГотов" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ готов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СветлаяТема" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Светлая</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Светлая тема</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СветлаяТема</Action>
+		</Command>
+		<Command name="ТемнаяТема" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Темная</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Темная тема</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ТемнаяТема</Action>
+		</Command>
+		<Command name="КонструкторЗапроса" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Конструктор запроса</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Конструктор запроса</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.QueryWizard</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КонструкторЗапроса</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ВыполнитьНаКлиенте" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На клиенте</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить код на клиенте</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.GenerateReport</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыполнитьКод</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ВыполнитьНаСервере" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На сервере</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить код на сервере</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.GenerateReport</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыполнитьНаСервере</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="СохранитьВФайл" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить в файл</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить код в файл</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.SaveReportSettings</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СохранитьВФайл</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ЗагрузитьИзФайла" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из файла</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить код из файла</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.LoadReportSettings</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗагрузитьИзФайла</Action>
+		</Command>
+		<Command name="ЗаменитьВхождения" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заменить вхождения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заменить вхождения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+F2</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.Rename</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаменитьВхождения</Action>
+		</Command>
+		<Command name="Сохранить" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+S</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.SaveFile</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Сохранить</Action>
+		</Command>
+		<Command name="ЗагрузитьПользовательскиеФункции" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить пользовательские функции</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить пользовательские функции</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьПользовательскиеФункции</Action>
+		</Command>
+		<Command name="ЗагрузитьПользовательскиеСниппеты" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить пользовательские сниппеты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить пользовательские сниппеты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьСниппеты</Action>
+		</Command>
+		<Command name="ЗагрузитьОписаниеАлгоритмов" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить описания  алгоритмов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить описание алгоритмов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+Alt+Space</Shortcut>
+			<Picture>
+				<xr:Ref>CommonPicture._37583_Algo_thumb</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗагрузитьОписаниеАлгоритмов</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ТекстАлгоритма">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="КаталогИсходников">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="НаКлиенте">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="РежимРедакторАлгоритма">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

@@ -109,6 +109,10 @@
 			<FileDragMode>AsFile</FileDragMode>
 			<DataPath>ДеревоСправочника</DataPath>
 			<RowPictureDataPath>ДеревоСправочника.Группа</RowPictureDataPath>
+			<RowsPicture>
+				<xr:Ref>CommonPicture._375832</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</RowsPicture>
 			<ContextMenu name="ДеревоСправочникаКонтекстноеМеню" id="5"/>
 			<AutoCommandBar name="ДеревоСправочникаКоманднаяПанель" id="6">
 				<Autofill>false</Autofill>

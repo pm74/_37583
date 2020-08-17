@@ -4,7 +4,6 @@
 	<objectType name="alg37583" open="true">
 		<property xmlns:d3p1="urn:37583/packages" name="_Repo" type="d3p1:Repo" form="Element" localName="Repo"/>
 		<property name="Path" type="xs:string" nillable="false"/>
-		<property name="Sha" type="xs:string" nillable="true" default="&quot;&quot;"/>
 		<property name="Tags" type="xs:string" default="&quot;&quot;" form="Element"/>
 		<property name="Comment" type="xs:string" default="&quot;&quot;" form="Element"/>
 		<property name="Text" type="xs:string" default="&quot;&quot;"/>

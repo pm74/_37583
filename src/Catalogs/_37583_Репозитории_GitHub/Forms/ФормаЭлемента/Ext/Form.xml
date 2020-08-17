@@ -3,6 +3,9 @@
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
 	<ChildItems>
 		<InputField name="Код" id="1">
 			<DataPath>Объект.Code</DataPath>
@@ -23,6 +26,29 @@
 			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
 			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
 		</InputField>
+		<UsualGroup name="Группа1" id="33">
+			<Group>AlwaysHorizontal</Group>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="34"/>
+			<ChildItems>
+				<InputField name="КаталогВСправочникеАлгоритмов" id="28">
+					<DataPath>Объект.ЛокальныйКаталог</DataPath>
+					<Enabled>false</Enabled>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Локальный каталог</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="КаталогВСправочникеАлгоритмовКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="КаталогВСправочникеАлгоритмовРасширеннаяПодсказка" id="30"/>
+				</InputField>
+				<Button name="СоздатьЛокальныйКаталог" id="31">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.СоздатьЛокальныйКаталог</CommandName>
+					<ExtendedTooltip name="СоздатьЛокальныйКаталогРасширеннаяПодсказка" id="32"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
 		<InputField name="АдресРесурса" id="10">
 			<DataPath>Объект.АдресРесурса</DataPath>
 			<EditMode>EnterOnInput</EditMode>
@@ -33,7 +59,6 @@
 			</Events>
 		</InputField>
 		<InputField name="Каталог" id="13">
-			<DataPath>Объект.Каталог</DataPath>
 			<EditMode>EnterOnInput</EditMode>
 			<ContextMenu name="КаталогКонтекстноеМеню" id="14"/>
 			<ExtendedTooltip name="КаталогРасширеннаяПодсказка" id="15"/>
@@ -51,19 +76,16 @@
 			</Events>
 		</InputField>
 		<InputField name="Пользователь" id="19">
-			<DataPath>Объект.Пользователь</DataPath>
 			<EditMode>EnterOnInput</EditMode>
 			<ContextMenu name="ПользовательКонтекстноеМеню" id="20"/>
 			<ExtendedTooltip name="ПользовательРасширеннаяПодсказка" id="21"/>
 		</InputField>
 		<InputField name="Пароль" id="22">
-			<DataPath>Объект.Пароль</DataPath>
 			<EditMode>EnterOnInput</EditMode>
 			<ContextMenu name="ПарольКонтекстноеМеню" id="23"/>
 			<ExtendedTooltip name="ПарольРасширеннаяПодсказка" id="24"/>
 		</InputField>
 		<InputField name="Автор" id="25">
-			<DataPath>Объект.Автор</DataPath>
 			<EditMode>EnterOnInput</EditMode>
 			<ContextMenu name="АвторКонтекстноеМеню" id="26"/>
 			<ExtendedTooltip name="АвторРасширеннаяПодсказка" id="27"/>
@@ -78,4 +100,21 @@
 			<SavedData>true</SavedData>
 		</Attribute>
 	</Attributes>
+	<Commands>
+		<Command name="СоздатьЛокальныйКаталог" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать  каталог</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать локальный каталог</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьЛокальныйКаталог</Action>
+		</Command>
+	</Commands>
 </Form>

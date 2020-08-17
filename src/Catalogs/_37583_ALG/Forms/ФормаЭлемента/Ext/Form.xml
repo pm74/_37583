@@ -245,12 +245,6 @@
 									</Picture>
 									<ExtendedTooltip name="ПереключательТекстКодРасширеннаяПодсказка" id="162"/>
 								</Button>
-								<Button name="ФорматироватьТекст" id="538">
-									<Type>CommandBarButton</Type>
-									<Width>3</Width>
-									<CommandName>Form.Command.ФорматироватьТекст</CommandName>
-									<ExtendedTooltip name="ФорматироватьТекстРасширеннаяПодсказка" id="539"/>
-								</Button>
 								<Popup name="УдалитьГруппаК2" id="115">
 									<Title>
 										<v8:item>
@@ -299,6 +293,11 @@
 									</ToolTip>
 									<ExtendedTooltip name="ГруппаКАРасширеннаяПодсказка" id="697"/>
 								</Popup>
+								<Button name="ОткрытьКонсольКода" id="891">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ОткрытьКонсольКода</CommandName>
+									<ExtendedTooltip name="ОткрытьКонсольКодаРасширеннаяПодсказка" id="892"/>
+								</Button>
 							</ChildItems>
 						</CommandBar>
 						<UsualGroup name="ГруппаТекстАлгоритма" id="749">
@@ -345,9 +344,7 @@
 											<AutoMaxWidth>false</AutoMaxWidth>
 											<MultiLine>true</MultiLine>
 											<ExtendedEdit>true</ExtendedEdit>
-											<TextColor>#23235E</TextColor>
-											<BackColor>web:MintCream</BackColor>
-											<Font ref="style:NormalTextFont" faceName="Courier New" kind="StyleItem"/>
+											<Font ref="style:NormalTextFont" faceName="Consolas" height="12" kind="StyleItem"/>
 											<ContextMenu name="ТекстАлгоритмаКонтекстноеМеню" id="112">
 												<ChildItems>
 													<Button name="КонструкторЗапросаПоказать" id="536">
@@ -370,7 +367,7 @@
 											</ContextMenu>
 											<ExtendedTooltip name="ТекстАлгоритмаРасширеннаяПодсказка" id="158"/>
 											<Events>
-												<Event name="EditTextChange">ТекстАлгоритмаИзменениеТекстаРедактирования</Event>
+												<Event name="OnChange">УстановитьМодифицированность</Event>
 											</Events>
 										</InputField>
 									</ChildItems>
@@ -407,7 +404,7 @@
 											<ContextMenu name="ТекстАКонтекстноеМеню" id="803"/>
 											<ExtendedTooltip name="ТекстАРасширеннаяПодсказка" id="804"/>
 											<Events>
-												<Event name="OnChange">ТекстАПриИзменении</Event>
+												<Event name="OnChange">УстановитьМодифицированность</Event>
 											</Events>
 										</TextDocumentField>
 									</ChildItems>
@@ -438,8 +435,8 @@
 									<TitleLocation>None</TitleLocation>
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<MultiLine>true</MultiLine>
-									<TextColor>#032C2C</TextColor>
-									<BackColor>style:ToolTipBackColor</BackColor>
+									<TextColor>style:FormTextColor</TextColor>
+									<BackColor>style:ReportHeaderBackColor</BackColor>
 									<ContextMenu name="КодАлгоритмаКонтекстноеМеню" id="120"/>
 									<ExtendedTooltip name="КодАлгоритмаРасширеннаяПодсказка" id="159"/>
 								</InputField>
@@ -459,7 +456,7 @@
 								</v8:item>
 							</ToolTip>
 							<VerticalStretch>false</VerticalStretch>
-							<Behavior>PopUp</Behavior>
+							<Behavior>Collapsible</Behavior>
 							<Collapsed>true</Collapsed>
 							<ControlRepresentation>Picture</ControlRepresentation>
 							<Representation>None</Representation>
@@ -639,7 +636,6 @@
 															<ExtendedTooltip name="RequarementsRelationРасширеннаяПодсказка" id="863"/>
 														</InputField>
 														<InputField name="RequarementsPath" id="878">
-															<DataPath>1/0:84ecfb1f-d3b8-4316-af95-1f1ab6aeba1b/0:e32792a7-03be-4768-9294-341e94425ab0/0:57646b3f-b369-411a-8fa6-0d87269ac0b1</DataPath>
 															<EditMode>EnterOnInput</EditMode>
 															<ContextMenu name="RequarementsPathКонтекстноеМеню" id="879"/>
 															<ExtendedTooltip name="RequarementsPathРасширеннаяПодсказка" id="880"/>
@@ -1007,11 +1003,21 @@
 											<ContextMenu name="ВыбрасыватьИсключениеКонтекстноеМеню" id="549"/>
 											<ExtendedTooltip name="ВыбрасыватьИсключениеРасширеннаяПодсказка" id="550"/>
 										</CheckBoxField>
-										<InputField name="ИдентификаторHTTP" id="635">
-											<DataPath>Объект.ИдентификаторHTTP</DataPath>
-											<ContextMenu name="ИдентификаторHTTPКонтекстноеМеню" id="636"/>
-											<ExtendedTooltip name="ИдентификаторHTTPРасширеннаяПодсказка" id="637"/>
-										</InputField>
+										<UsualGroup name="Группа1" id="886">
+											<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="887"/>
+											<ChildItems>
+												<InputField name="ИдентификаторHTTP" id="635">
+													<DataPath>Объект.ИдентификаторHTTP</DataPath>
+													<ContextMenu name="ИдентификаторHTTPКонтекстноеМеню" id="636"/>
+													<ExtendedTooltip name="ИдентификаторHTTPРасширеннаяПодсказка" id="637"/>
+												</InputField>
+												<Button name="СоздатьHTTP_ID" id="884">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.СоздатьHTTP_ID</CommandName>
+													<ExtendedTooltip name="СоздатьHTTP_IDРасширеннаяПодсказка" id="885"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
 									</ChildItems>
 								</UsualGroup>
 							</ChildItems>
@@ -1131,12 +1137,6 @@
 							<ExtendedTooltip name="ТегиРасширеннаяПодсказка" id="567"/>
 						</InputField>
 						<UsualGroup name="ГрGitHub" id="864">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>GitHub</v8:content>
-								</v8:item>
-							</Title>
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -1151,23 +1151,23 @@
 							<ExtendedTooltip name="ГрGitHubРасширеннаяПодсказка" id="865"/>
 							<ChildItems>
 								<InputField name="REPO" id="875">
-									<DataPath>Объект.REPO</DataPath>
+									<DataPath>Объект.Репозиторий</DataPath>
 									<ContextMenu name="REPOКонтекстноеМеню" id="876"/>
 									<ExtendedTooltip name="REPOРасширеннаяПодсказка" id="877"/>
 								</InputField>
 								<InputField name="PATH" id="869">
-									<DataPath>Объект.PATH</DataPath>
+									<DataPath>Объект.Путь</DataPath>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>PATH</v8:content>
+											<v8:content>Путь</v8:content>
 										</v8:item>
 									</Title>
 									<ContextMenu name="PATHКонтекстноеМеню" id="870"/>
 									<ExtendedTooltip name="PATHРасширеннаяПодсказка" id="871"/>
 								</InputField>
 								<InputField name="SHA" id="881">
-									<DataPath>SHA</DataPath>
+									<DataPath>Объект.Хеш</DataPath>
 									<ContextMenu name="SHAКонтекстноеМеню" id="882"/>
 									<ExtendedTooltip name="SHAРасширеннаяПодсказка" id="883"/>
 								</InputField>
@@ -1361,6 +1361,13 @@
 									<ContextMenu name="КомандныйИнтерфейсНомерСтрокиКонтекстноеМеню" id="677"/>
 									<ExtendedTooltip name="КомандныйИнтерфейсНомерСтрокиРасширеннаяПодсказка" id="678"/>
 								</LabelField>
+								<CheckBoxField name="КомандныйИнтерфейсНеБСП" id="888">
+									<DataPath>Объект.КомандныйИнтерфейс.НеБСП</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="КомандныйИнтерфейсНеБСПКонтекстноеМеню" id="889"/>
+									<ExtendedTooltip name="КомандныйИнтерфейсНеБСПРасширеннаяПодсказка" id="890"/>
+								</CheckBoxField>
 								<CheckBoxField name="КомандныйИнтерфейсАктивно" id="730">
 									<DataPath>Объект.КомандныйИнтерфейс.Активно</DataPath>
 									<Title>
@@ -1394,6 +1401,9 @@
 									<ListChoiceMode>true</ListChoiceMode>
 									<ContextMenu name="КомандныйИнтерфейсОбъектМетаданныхКонтекстноеМеню" id="713"/>
 									<ExtendedTooltip name="КомандныйИнтерфейсОбъектМетаданныхРасширеннаяПодсказка" id="714"/>
+									<Events>
+										<Event name="OnChange">КомандныйИнтерфейсОбъектМетаданныхПриИзменении</Event>
+									</Events>
 								</InputField>
 								<InputField name="КомандныйИнтерфейсКонтекст" id="682">
 									<DataPath>Объект.КомандныйИнтерфейс.КонтекстФормы</DataPath>
@@ -1401,9 +1411,6 @@
 									<ChoiceButton>true</ChoiceButton>
 									<ContextMenu name="КомандныйИнтерфейсКонтекстКонтекстноеМеню" id="683"/>
 									<ExtendedTooltip name="КомандныйИнтерфейсКонтекстРасширеннаяПодсказка" id="684"/>
-									<Events>
-										<Event name="StartChoice">КомандныйИнтерфейсКонтекстНачалоВыбора</Event>
-									</Events>
 								</InputField>
 								<InputField name="КомандныйИнтерфейсПредставление" id="706">
 									<DataPath>Объект.КомандныйИнтерфейс.Представление</DataPath>
@@ -1707,19 +1714,24 @@
 				<v8:Type>v8:ValueListType</v8:Type>
 			</Type>
 		</Attribute>
-		<Attribute name="SHA" id="3">
+		<Attribute name="ПараметрыПодключаемыхКоманд" id="3">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>SHA</v8:content>
+					<v8:content>Параметры подключаемых команд</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ТекущийСписокФорм" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий список форм</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:StringQualifiers>
-					<v8:Length>40</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
+				<v8:Type>v8:ValueListType</v8:Type>
 			</Type>
 		</Attribute>
 		<ConditionalAppearance>
@@ -2008,28 +2020,6 @@
 			<Representation>TextPicture</Representation>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
-		<Command name="ФорматироватьТекст" id="15">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Формат.</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Форматировать текст</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Shortcut>Ctrl+Alt+F</Shortcut>
-			<Picture>
-				<xr:Ref>StdPicture.GanttChart</xr:Ref>
-				<xr:LoadTransparent>true</xr:LoadTransparent>
-			</Picture>
-			<Action>ФорматироватьТекст</Action>
-			<Representation>Picture</Representation>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
 		<Command name="ВыгрузитьXML" id="16">
 			<Title>
 				<v8:item>
@@ -2105,6 +2095,42 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ВыбратьДекоратор</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="СоздатьHTTP_ID" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать идентификатор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать HTTP ID</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьHTTP_ID</Action>
+		</Command>
+		<Command name="ОткрытьКонсольКода" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Консоль salexdv (Ctrl+K)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Консоль кода  : автор  salexdv (https://infostart.ru/public/1266087/) </v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+K</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.AddToFavorites</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОткрытьКонсольКода</Action>
 			<Representation>TextPicture</Representation>
 		</Command>
 	</Commands>

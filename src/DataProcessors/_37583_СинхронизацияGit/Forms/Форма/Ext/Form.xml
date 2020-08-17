@@ -2,134 +2,193 @@
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<ScalingMode>Compact</ScalingMode>
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
-		<Autofill>false</Autofill>
-	</AutoCommandBar>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
+		<Event name="OnLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<Table name="Репозитории" id="68">
-			<HeightInTableRows>2</HeightInTableRows>
-			<AutoInsertNewRow>true</AutoInsertNewRow>
-			<EnableStartDrag>true</EnableStartDrag>
-			<EnableDrag>true</EnableDrag>
-			<DataPath>Объект.Репозитории</DataPath>
-			<RowFilter xsi:nil="true"/>
-			<ContextMenu name="РепозиторииКонтекстноеМеню" id="69"/>
-			<AutoCommandBar name="РепозиторииКоманднаяПанель" id="70">
-				<Autofill>false</Autofill>
-				<ChildItems>
-					<Button name="ПолучитьОтветGit" id="13">
-						<Type>CommandBarButton</Type>
-						<CommandName>Form.Command.ПрочитатьСодержимоеРепозитория</CommandName>
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Получить содержимое репозитория</v8:content>
-							</v8:item>
-						</Title>
-						<ExtendedTooltip name="ПолучитьОтветGitРасширеннаяПодсказка" id="14"/>
-					</Button>
-				</ChildItems>
-			</AutoCommandBar>
-			<ExtendedTooltip name="РепозиторииРасширеннаяПодсказка" id="71"/>
-			<SearchStringAddition name="РепозиторииСтрокаПоиска" id="72">
-				<AdditionSource>
-					<Item>Репозитории</Item>
-					<Type>SearchStringRepresentation</Type>
-				</AdditionSource>
-				<ContextMenu name="РепозиторииСтрокаПоискаКонтекстноеМеню" id="73"/>
-				<ExtendedTooltip name="РепозиторииСтрокаПоискаРасширеннаяПодсказка" id="74"/>
-			</SearchStringAddition>
-			<ViewStatusAddition name="РепозиторииСостояниеПросмотра" id="75">
-				<AdditionSource>
-					<Item>Репозитории</Item>
-					<Type>ViewStatusRepresentation</Type>
-				</AdditionSource>
-				<ContextMenu name="РепозиторииСостояниеПросмотраКонтекстноеМеню" id="76"/>
-				<ExtendedTooltip name="РепозиторииСостояниеПросмотраРасширеннаяПодсказка" id="77"/>
-			</ViewStatusAddition>
-			<SearchControlAddition name="РепозиторииУправлениеПоиском" id="78">
-				<AdditionSource>
-					<Item>Репозитории</Item>
-					<Type>SearchControl</Type>
-				</AdditionSource>
-				<ContextMenu name="РепозиторииУправлениеПоискомКонтекстноеМеню" id="79"/>
-				<ExtendedTooltip name="РепозиторииУправлениеПоискомРасширеннаяПодсказка" id="80"/>
-			</SearchControlAddition>
+		<Pages name="ГруппаШапка" id="152">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="153"/>
 			<ChildItems>
-				<LabelField name="РепозиторииНомерСтроки" id="81">
-					<DataPath>Объект.Репозитории.LineNumber</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="РепозиторииНомерСтрокиКонтекстноеМеню" id="82"/>
-					<ExtendedTooltip name="РепозиторииНомерСтрокиРасширеннаяПодсказка" id="83"/>
-				</LabelField>
-				<CheckBoxField name="РепозиторииИспользовать" id="93">
-					<DataPath>Объект.Репозитории.Использование</DataPath>
+				<Page name="ГруппаРепозитории" id="154">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content> </v8:content>
+							<v8:content>Репозитории</v8:content>
 						</v8:item>
 					</Title>
-					<EditMode>EnterOnInput</EditMode>
-					<HeaderPicture>
-						<xr:Ref>StdPicture.AppearanceCheckBox</xr:Ref>
-						<xr:LoadTransparent>true</xr:LoadTransparent>
-					</HeaderPicture>
-					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="РепозиторииИспользоватьКонтекстноеМеню" id="94"/>
-					<ExtendedTooltip name="РепозиторииИспользоватьРасширеннаяПодсказка" id="95"/>
-				</CheckBoxField>
-				<CheckBoxField name="РепозиторииВыбиратьРекурсивно" id="111">
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа репозитории</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаРепозиторииРасширеннаяПодсказка" id="155"/>
+					<ChildItems>
+						<Table name="Репозитории" id="68">
+							<HeightInTableRows>2</HeightInTableRows>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Репозитории</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="РепозиторииКонтекстноеМеню" id="69"/>
+							<AutoCommandBar name="РепозиторииКоманднаяПанель" id="70">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="ПолучитьОтветGit" id="13">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПрочитатьСодержимоеРепозитория</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Получить содержимое репозитория</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ПолучитьОтветGitРасширеннаяПодсказка" id="14"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="РепозиторииРасширеннаяПодсказка" id="71"/>
+							<SearchStringAddition name="РепозиторииСтрокаПоиска" id="72">
+								<AdditionSource>
+									<Item>Репозитории</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РепозиторииСтрокаПоискаКонтекстноеМеню" id="73"/>
+								<ExtendedTooltip name="РепозиторииСтрокаПоискаРасширеннаяПодсказка" id="74"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="РепозиторииСостояниеПросмотра" id="75">
+								<AdditionSource>
+									<Item>Репозитории</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РепозиторииСостояниеПросмотраКонтекстноеМеню" id="76"/>
+								<ExtendedTooltip name="РепозиторииСостояниеПросмотраРасширеннаяПодсказка" id="77"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="РепозиторииУправлениеПоиском" id="78">
+								<AdditionSource>
+									<Item>Репозитории</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="РепозиторииУправлениеПоискомКонтекстноеМеню" id="79"/>
+								<ExtendedTooltip name="РепозиторииУправлениеПоискомРасширеннаяПодсказка" id="80"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="РепозиторииНомерСтроки" id="81">
+									<DataPath>Объект.Репозитории.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РепозиторииНомерСтрокиКонтекстноеМеню" id="82"/>
+									<ExtendedTooltip name="РепозиторииНомерСтрокиРасширеннаяПодсказка" id="83"/>
+								</LabelField>
+								<CheckBoxField name="РепозиторииИспользовать" id="93">
+									<DataPath>Объект.Репозитории.Использование</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content> </v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderPicture>
+										<xr:Ref>StdPicture.AppearanceCheckBox</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</HeaderPicture>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="РепозиторииИспользоватьКонтекстноеМеню" id="94"/>
+									<ExtendedTooltip name="РепозиторииИспользоватьРасширеннаяПодсказка" id="95"/>
+								</CheckBoxField>
+								<CheckBoxField name="РепозиторииВыбиратьРекурсивно" id="111">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>рек.</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderPicture>
+										<xr:Ref>StdPicture.Refresh</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</HeaderPicture>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="РепозиторииВыбиратьРекурсивноКонтекстноеМеню" id="112"/>
+									<ExtendedTooltip name="РепозиторииВыбиратьРекурсивноРасширеннаяПодсказка" id="113"/>
+								</CheckBoxField>
+								<InputField name="РепозиторииАдресРесурса" id="84">
+									<DataPath>Объект.Репозитории.АдресРесурса</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РепозиторииАдресРесурсаКонтекстноеМеню" id="85"/>
+									<ExtendedTooltip name="РепозиторииАдресРесурсаРасширеннаяПодсказка" id="86"/>
+								</InputField>
+								<InputField name="РепозиторииВетка" id="129">
+									<DataPath>Объект.Репозитории.Ветка</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РепозиторииВеткаКонтекстноеМеню" id="130"/>
+									<ExtendedTooltip name="РепозиторииВеткаРасширеннаяПодсказка" id="131"/>
+								</InputField>
+								<InputField name="РепозиторииРепозиторий" id="87">
+									<DataPath>Объект.Репозитории.Репозиторий</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РепозиторииРепозиторийКонтекстноеМеню" id="88"/>
+									<ExtendedTooltip name="РепозиторииРепозиторийРасширеннаяПодсказка" id="89"/>
+								</InputField>
+								<InputField name="РепозиторииПароль" id="90">
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РепозиторииПарольКонтекстноеМеню" id="91"/>
+									<ExtendedTooltip name="РепозиторииПарольРасширеннаяПодсказка" id="92"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаНастройки" id="156">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>рек.</v8:content>
+							<v8:content>Настройки</v8:content>
 						</v8:item>
 					</Title>
-					<EditMode>EnterOnInput</EditMode>
-					<HeaderPicture>
-						<xr:Ref>StdPicture.Refresh</xr:Ref>
-						<xr:LoadTransparent>false</xr:LoadTransparent>
-					</HeaderPicture>
-					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="РепозиторииВыбиратьРекурсивноКонтекстноеМеню" id="112"/>
-					<ExtendedTooltip name="РепозиторииВыбиратьРекурсивноРасширеннаяПодсказка" id="113"/>
-				</CheckBoxField>
-				<InputField name="РепозиторииАдресРесурса" id="84">
-					<DataPath>Объект.Репозитории.АдресРесурса</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="РепозиторииАдресРесурсаКонтекстноеМеню" id="85"/>
-					<ExtendedTooltip name="РепозиторииАдресРесурсаРасширеннаяПодсказка" id="86"/>
-				</InputField>
-				<InputField name="РепозиторииВетка" id="129">
-					<DataPath>Объект.Репозитории.Ветка</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="РепозиторииВеткаКонтекстноеМеню" id="130"/>
-					<ExtendedTooltip name="РепозиторииВеткаРасширеннаяПодсказка" id="131"/>
-				</InputField>
-				<InputField name="РепозиторииДиректория" id="102">
-					<DataPath>Объект.Репозитории.Каталог</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="РепозиторииДиректорияКонтекстноеМеню" id="103"/>
-					<ExtendedTooltip name="РепозиторииДиректорияРасширеннаяПодсказка" id="104"/>
-				</InputField>
-				<InputField name="РепозиторииРепозиторий" id="87">
-					<DataPath>1/0:50866ad1-2be5-4090-8ab8-b69fae67d37a/0:7be2a593-c0bf-4824-b48d-71e208dc680b</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="РепозиторииРепозиторийКонтекстноеМеню" id="88"/>
-					<ExtendedTooltip name="РепозиторииРепозиторийРасширеннаяПодсказка" id="89"/>
-				</InputField>
-				<InputField name="РепозиторииПароль" id="90">
-					<DataPath>1/0:50866ad1-2be5-4090-8ab8-b69fae67d37a/0:b6495a7a-3a81-4b1f-a4bb-219ad6c82b27</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="РепозиторииПарольКонтекстноеМеню" id="91"/>
-					<ExtendedTooltip name="РепозиторииПарольРасширеннаяПодсказка" id="92"/>
-				</InputField>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настройки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="157"/>
+					<ChildItems>
+						<CheckBoxField name="ИзвлекатьСтроковоеСодержимое" id="158">
+							<DataPath>ИзвлекатьСтроковоеСодержимое</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИзвлекатьСтроковоеСодержимоеКонтекстноеМеню" id="159"/>
+							<ExtendedTooltip name="ИзвлекатьСтроковоеСодержимоеРасширеннаяПодсказка" id="160"/>
+						</CheckBoxField>
+						<InputField name="ОбрабатыватьТолькоФайлыСРаширениями" id="161">
+							<DataPath>ОбрабатыватьТолькоФайлыСРаширениями</DataPath>
+							<ContextMenu name="ОбрабатыватьТолькоФайлыСРаширениямиКонтекстноеМеню" id="162"/>
+							<ExtendedTooltip name="ОбрабатыватьТолькоФайлыСРаширениямиРасширеннаяПодсказка" id="163"/>
+						</InputField>
+						<InputField name="ОграничениеРазмераФайлов" id="164">
+							<DataPath>ОграничениеРазмераФайлов</DataPath>
+							<ContextMenu name="ОграничениеРазмераФайловКонтекстноеМеню" id="165"/>
+							<ExtendedTooltip name="ОграничениеРазмераФайловРасширеннаяПодсказка" id="166"/>
+						</InputField>
+					</ChildItems>
+				</Page>
 			</ChildItems>
-		</Table>
+		</Pages>
 		<UsualGroup name="Группа1" id="34">
 			<Group>AlwaysHorizontal</Group>
 			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="35"/>
@@ -142,6 +201,7 @@
 		</UsualGroup>
 		<Table name="ДеревоПакетов" id="40">
 			<Representation>Tree</Representation>
+			<CommandBarLocation>Bottom</CommandBarLocation>
 			<AutoInsertNewRow>true</AutoInsertNewRow>
 			<EnableStartDrag>true</EnableStartDrag>
 			<EnableDrag>true</EnableDrag>
@@ -159,20 +219,18 @@
 						<CommandName>Form.Command.ПрочитатьКаталог</CommandName>
 						<ExtendedTooltip name="ДеревоПакетовПрочитатьСодержимоеРасширеннаяПодсказка" id="118"/>
 					</Button>
-					<Button name="ДеревоПакетовИзвлечьОтмеченныеРесурсы" id="137">
-						<Type>CommandBarButton</Type>
-						<CommandName>Form.Command.ИзвлечьОтмеченныеРесурсы</CommandName>
-						<ExtendedTooltip name="ДеревоПакетовИзвлечьОтмеченныеРесурсыРасширеннаяПодсказка" id="138"/>
-					</Button>
-					<Button name="ДеревоПакетовКонтекстноеМенюИмпорт" id="127">
-						<Type>CommandBarButton</Type>
-						<CommandName>Form.Command.СинхронизацияКаталгога</CommandName>
-						<ExtendedTooltip name="ДеревоПакетовКонтекстноеМенюИмпортРасширеннаяПодсказка" id="128"/>
-					</Button>
 				</ChildItems>
 			</ContextMenu>
 			<AutoCommandBar name="ДеревоПакетовКоманднаяПанель" id="42">
 				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="ДеревоПакетовИзвлечьОтмеченныеРесурсы" id="137">
+						<Type>CommandBarButton</Type>
+						<Enabled>false</Enabled>
+						<CommandName>Form.Command.ИзвлечьОтмеченныеРесурсы</CommandName>
+						<ExtendedTooltip name="ДеревоПакетовИзвлечьОтмеченныеРесурсыРасширеннаяПодсказка" id="138"/>
+					</Button>
+				</ChildItems>
 			</AutoCommandBar>
 			<ExtendedTooltip name="ДеревоПакетовРасширеннаяПодсказка" id="43"/>
 			<SearchStringAddition name="ДеревоПакетовСтрокаПоиска" id="44">
@@ -199,6 +257,9 @@
 				<ContextMenu name="ДеревоПакетовУправлениеПоискомКонтекстноеМеню" id="51"/>
 				<ExtendedTooltip name="ДеревоПакетовУправлениеПоискомРасширеннаяПодсказка" id="52"/>
 			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ДеревоПакетовВыбор</Event>
+			</Events>
 			<ChildItems>
 				<CheckBoxField name="ДеревоПакетовРекурсия" id="114">
 					<DataPath>ДеревоПакетов.Рекурсия</DataPath>
@@ -265,9 +326,21 @@
 					<ContextMenu name="ДеревоПакетовpathКонтекстноеМеню" id="57"/>
 					<ExtendedTooltip name="ДеревоПакетовpathРасширеннаяПодсказка" id="58"/>
 				</InputField>
-				<ColumnGroup name="ДеревоПакетовГруппа1" id="135">
+				<ColumnGroup name="ДеревоПакетовГруппаХеш" id="135">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дерево пакетов группа хеш</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дерево пакетов группа хеш</v8:content>
+						</v8:item>
+					</ToolTip>
 					<Group>InCell</Group>
-					<ExtendedTooltip name="ДеревоПакетовГруппа1РасширеннаяПодсказка" id="136"/>
+					<ExtendedTooltip name="ДеревоПакетовГруппаХешРасширеннаяПодсказка" id="136"/>
 					<ChildItems>
 						<PictureField name="ДеревоПакетовДанныеКартинкиКоммитов" id="132">
 							<DataPath>ДеревоПакетов.ДанныеКартинкиКоммитов</DataPath>
@@ -276,10 +349,6 @@
 								<xr:Ref>StdPicture.AppearanceCircleEmpty</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</HeaderPicture>
-							<ValuesPicture>
-								<xr:Ref>CommonPicture._375834</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</ValuesPicture>
 							<ContextMenu name="ДеревоПакетовДанныеКартинкиКоммитовКонтекстноеМеню" id="133"/>
 							<ExtendedTooltip name="ДеревоПакетовДанныеКартинкиКоммитовРасширеннаяПодсказка" id="134"/>
 						</PictureField>
@@ -291,11 +360,20 @@
 						</InputField>
 					</ChildItems>
 				</ColumnGroup>
-				<InputField name="ДеревоПакетовurl" id="62">
-					<DataPath>ДеревоПакетов.url</DataPath>
+				<LabelField name="Html_url" id="62">
+					<DataPath>ДеревоПакетов.html_url</DataPath>
 					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ДеревоПакетовurlКонтекстноеМеню" id="63"/>
-					<ExtendedTooltip name="ДеревоПакетовurlРасширеннаяПодсказка" id="64"/>
+					<CellHyperlink>true</CellHyperlink>
+					<Hiperlink>true</Hiperlink>
+					<TextColor>#0000FF</TextColor>
+					<ContextMenu name="Html_urlКонтекстноеМеню" id="63"/>
+					<ExtendedTooltip name="Html_urlРасширеннаяПодсказка" id="64"/>
+				</LabelField>
+				<InputField name="ДеревоПакетовsize" id="149">
+					<DataPath>ДеревоПакетов.size</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоПакетовsizeКонтекстноеМеню" id="150"/>
+					<ExtendedTooltip name="ДеревоПакетовsizeРасширеннаяПодсказка" id="151"/>
 				</InputField>
 				<InputField name="ДеревоПакетовcontent" id="108">
 					<DataPath>ДеревоПакетов.content</DataPath>
@@ -304,6 +382,7 @@
 					<ExtendedTooltip name="ДеревоПакетовcontentРасширеннаяПодсказка" id="110"/>
 				</InputField>
 				<ColumnGroup name="ДеревоПакетовГруппа3" id="147">
+					<Visible>false</Visible>
 					<ExtendedTooltip name="ДеревоПакетовГруппа3РасширеннаяПодсказка" id="148"/>
 					<ChildItems>
 						<InputField name="ДеревоПакетовРесурсGitHub" id="119">
@@ -525,10 +604,120 @@
 						</v8:item>
 					</Title>
 					<Type>
-						<v8:Type>cfg:CatalogRef._37583_Репозитории_GitHub</v8:Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="html_url" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Url</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>300</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="download_url" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Download url</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="size" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Size</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
 					</Type>
 				</Column>
 			</Columns>
+		</Attribute>
+		<Attribute name="ОграничениеРазмераФайлов" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ограничение размера файлов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<Save>
+				<Field>ОграничениеРазмераФайлов</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ИзвлекатьСтроковоеСодержимое" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>RAW content</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ИзвлекатьСтроковоеСодержимое</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ОбрабатыватьТолькоФайлыСРаширениями" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обрабатывать только файлы с раширениями</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>200</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>ОбрабатыватьТолькоФайлыСРаширениями</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ПараметрыПодключаемыхКоманд" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры подключаемых команд</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
 		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
@@ -634,10 +823,6 @@
 					<v8:content>Прочитать содержимое репозитория</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Picture>
-				<xr:Ref>CommonPicture._37583_git_thumb</xr:Ref>
-				<xr:LoadTransparent>true</xr:LoadTransparent>
-			</Picture>
 			<Action>ПрочитатьСодержимоеРепозиторияGit</Action>
 			<Representation>TextPicture</Representation>
 		</Command>
@@ -659,26 +844,6 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ПрочитатьСодержимоеПапки</Action>
-			<Representation>TextPicture</Representation>
-		</Command>
-		<Command name="СинхронизацияКаталгога" id="3">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Синхронизация каталога</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Синхронизация каталгога</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Picture>
-				<xr:Ref>StdPicture.ReadChanges</xr:Ref>
-				<xr:LoadTransparent>true</xr:LoadTransparent>
-			</Picture>
-			<Action>СинхронизацияКаталгога</Action>
 			<Representation>TextPicture</Representation>
 		</Command>
 		<Command name="ИзвлечьОтмеченныеРесурсы" id="4">
